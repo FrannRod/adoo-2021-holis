@@ -78,7 +78,7 @@ public class Empresa {
 		public void agregarOferta(OfertaLaboral oferta){
 			this.ofertas.add(oferta);
 		}
-		public void agregarOferta(OfertaLaboral oferta){
+		public void eliminarOferta(OfertaLaboral oferta){
 			this.ofertas.remove(oferta);
 		}
 	// Otros métodos:
