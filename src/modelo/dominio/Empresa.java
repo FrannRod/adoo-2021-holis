@@ -6,11 +6,22 @@ public class Empresa {
 	private int cuit;
 	private Direccion direccion
 	private String correo;
+	private String telefono;
 	private String tipoDeEmpresa;
 	private List<OfertaLaboral> ofertas;
 	private String contraseña;
 	private String usuario;
 
+	// Constructores
+		public Empresa(String razonSocial,int cuit,Direccion direccion,String correo,String telefono,String tipoDeEmpresa,String contraseña,String usuario){
+			this.razonSocial = razonSocial
+			this.cuit = cuit
+			this.direccio = direccio
+			this.correo = correo
+			this.tipoDeEmpresa = tipoDeEmpresa
+			this.contraseña = contraseña
+			this.usuario = usuario
+		}
 	// Setters y Getters:
 		public String getRazonSocial(){
 			return razonSocial;
@@ -47,6 +58,12 @@ public class Empresa {
 		}
 		public void setUsuario(String usuario){
 			this.usuario = usuario;
+		}
+		public String getTelefono(){
+			return telefono;
+		}
+		public void setTelefono(String telefono){
+			this.telefono = telefono;
 		}
 		public Direccion getDireccion(){
 			return direccion;
