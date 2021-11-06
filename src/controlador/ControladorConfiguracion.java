@@ -4,6 +4,12 @@ public class ControladorConfiguracion{
 	private List<Pais> paises;
 	private List<Categoria> categoria;
 
+	// Constructores
+		public ControladorConfiguracion(){
+			this.idiomas = new List<Idioma>();
+			this.paises = new List<Pais>();
+			this.categoria = new List<Categoria>();
+		}
 	// Collections:
 		public void agregarIdioma(Idioma idiomas){
 			this.Idiomas.add(idioma);

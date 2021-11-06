@@ -21,6 +21,7 @@ public class Empresa {
 			this.tipoDeEmpresa = tipoDeEmpresa
 			this.contraseña = contraseña
 			this.usuario = usuario
+			this.ofertas = new List<OfertaLaboral> ()
 		}
 	// Setters y Getters:
 		public String getRazonSocial(){
