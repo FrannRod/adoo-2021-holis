@@ -14,14 +14,14 @@ public class Empresa {
 
 	// Constructores
 		public Empresa(String razonSocial,int cuit,Direccion direccion,String correo,String telefono,String tipoDeEmpresa,String contraseña,String usuario){
-			this.razonSocial = razonSocial
-			this.cuit = cuit
-			this.direccio = direccio
-			this.correo = correo
-			this.tipoDeEmpresa = tipoDeEmpresa
-			this.contraseña = contraseña
-			this.usuario = usuario
-			this.ofertas = new List<OfertaLaboral> ()
+			this.razonSocial = razonSocial;
+			this.cuit = cuit;
+			this.direccio = direccio;
+			this.correo = correo;
+			this.tipoDeEmpresa = tipoDeEmpresa;
+			this.contraseña = contraseña;
+			this.usuario = usuario;
+			this.ofertas = new List<OfertaLaboral> ();
 		}
 	// Setters y Getters:
 		public String getRazonSocial(){

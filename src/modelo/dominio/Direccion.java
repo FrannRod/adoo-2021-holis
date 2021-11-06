@@ -27,13 +27,13 @@ public class Direccion {
 			return pais;
 		}
 		public void setPais(Pais pais){
-			this.pais = pais
+			this.pais = pais;
 		}
 		public String getLocalidad(){
 			return localidad;
 		}
 		public void setLocalidad(String localidad){
-			this.localidad = localidad
+			this.localidad = localidad;
 		}
 		public String getCalle(){
 			return calle;
@@ -45,13 +45,13 @@ public class Direccion {
 			return numero;
 		}
 		public void setNumero(int numero){
-			this.numero = numero
+			this.numero = numero;
 		}
 		public int getPiso(){
 			return piso;
 		}
 		public void setPiso(int piso){
-			this.piso = piso
+			this.piso = piso;
 		}
 }
 
