@@ -14,4 +14,4 @@ public class requisito{
 		}
 		public String getNombre(){
 			return this.nombre;
-}
+} 
