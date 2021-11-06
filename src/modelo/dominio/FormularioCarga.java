@@ -1,8 +1,8 @@
 package modelo.dominio;
 public class FormularioCarga{
 
-	private Byte cv;
-	private float remuneracion;
+	 Byte cv;
+	 float remuneracion;
 
 	// Constructores:
 		public FormularioCarga(Byte cv,float remuneracion){
