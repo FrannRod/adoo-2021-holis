@@ -6,7 +6,6 @@ public class Idioma{
 	// Constructores:
 		public Idioma(String nombre){
 			this.nombre = nombre;
-
 		}
 	// Setters y Getters:
 		public void setNombre(String nombre){
@@ -14,4 +13,5 @@ public class Idioma{
 		}
 		public String getNombre(){
 			return this.nombre;
+		}
 }
