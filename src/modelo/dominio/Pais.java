@@ -1,6 +1,6 @@
 package modelo.dominio;
 public class Pais {
-	String nombre;
+	private String nombre;
 
 	// Constructores:
 		public Pais(String nombre){

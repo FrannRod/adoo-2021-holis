@@ -4,7 +4,7 @@ public class Imagen{
 	private String encabezado;
 	private String cuerpo;
 	private String pie;
-	private String formato;
+	private Formato formato;
 
 	// Constructores:
 	public Imagen(String nombre, String apellido, String correo, Formato formato){
@@ -40,15 +40,7 @@ public class Imagen{
 		public void setFormato(Formato formato){
 			this.formato = formato;
 		}
-		public String getFormato(){
+		public Formato getFormato(){
 			return this.formato;
 		}
-	// enum: REVISAR
-		enum Formato{
-    	png, svg, jpg, jpeg;
-	}
-
-
-
-
 }

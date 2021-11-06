@@ -80,27 +80,27 @@ public class Postulante{
 			this.Idiomas.remove(idioma);
 		}
 
-		public void agregarIntereses(Categoria intereses){
+		public void agregarInteres(Categoria intereses){
 			this.Categoria.add(intereses);
 		}
 
-		public void eliminarIntereses(Categoria intereses){
+		public void eliminarInteres(Categoria intereses){
 			this.Categoria.remove(intereses);
 		}
 
-		public void agregarFavoritos(OfertaLaboral favoritos){
+		public void agregarFavorito(OfertaLaboral favoritos){
 			this.OfertaLaboral.add(favoritos);
 		}
 
-		public void eliminarFavoritos(OfertaLaboral favoritos){
+		public void eliminarFavorito(OfertaLaboral favoritos){
 			this.OfertaLaboral.remove(favoritos);
 		}
 
-		public void agregarMisPostulaciones(OfertaLaboral misPostulaciones){
+		public void agregarPostulacion(OfertaLaboral misPostulaciones){
 			this.OfertaLaboral.add(misPostulaciones);
 		}
 
-		public void eliminarMisPostulaciones(OfertaLaboral misPostulaciones){
+		public void eliminarPostulacion(OfertaLaboral misPostulaciones){
 			this.OfertaLaboral.remove(misPostulaciones);
 		}
 

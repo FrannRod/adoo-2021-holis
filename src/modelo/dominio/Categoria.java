@@ -1,12 +1,10 @@
 package modelo.dominio;
 public class Categoria{
-
-	String nombre;
+	private String nombre;
 
 	// Constructores:
 		public Categoria(String nombre){
 			this.nombre = nombre;
-
 		}
 		
 	// Setters y Getters:
@@ -15,4 +13,5 @@ public class Categoria{
 		}
 		public String getNombre(){
 			return this.nombre;
+		}
 }

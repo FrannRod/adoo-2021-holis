@@ -12,7 +12,6 @@ public class Administrador{
 			this.apellido = apellido;
 			this.correo = correo;
 			this.contraseña = contraseña;
-
 		}
 		
 	// Setters y Getters:
