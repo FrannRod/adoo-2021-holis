@@ -17,5 +17,135 @@ public class OfertaLaboral{
     private Integer periodoDeCierre;
     private Empresa empresa; 
 
-}
+	public String getTitulo() {
+		return this.titulo;
+	}
 
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public List<Postulante> getPostulantes() {
+		return this.postulantes;
+	}
+
+	public void setPostulantes(List<Postulante> postulantes) {
+		this.postulantes = postulantes;
+	}
+
+	public List<Tarea> getDescripcionDelPuesto() {
+		return this.descripcionDelPuesto;
+	}
+
+	public void setDescripcionDelPuesto(List<Tarea> descripcionDelPuesto) {
+		this.descripcionDelPuesto = descripcionDelPuesto;
+	}
+
+	public Boolean getModalidadContratoFullTime() {
+		return this.modalidadContratoFullTime;
+	}
+
+	public void setModalidadContratoFullTime(Boolean modalidadContratoFullTime) {
+		this.modalidadContratoFullTime = modalidadContratoFullTime;
+	}
+
+	public Boolean getTipoTrabajoRemoto() {
+		return this.tipoTrabajoRemoto;
+	}
+
+	public void setTipoTrabajoRemoto(Boolean tipoTrabajoRemoto) {
+		this.tipoTrabajoRemoto = tipoTrabajoRemoto;
+	}
+
+	public Direccion getLugarTrabajo() {
+		return this.lugarTrabajo;
+	}
+
+	public void setLugarTrabajo(Direccion lugarTrabajo) {
+		this.lugarTrabajo = lugarTrabajo;
+	}
+
+	public Categoria getCategoria() {
+		return this.categoria;
+	}
+
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
+	}
+
+	public List<Requisito> getRequisitos() {
+		return this.requisitos;
+	}
+
+	public void setRequisitos(List<Requisito> requisitos) {
+		this.requisitos = requisitos;
+	}
+
+	public Float getSueldoOfrecido() {
+		return this.sueldoOfrecido;
+	}
+
+	public void setSueldoOfrecido(Float sueldoOfrecido) {
+		this.sueldoOfrecido = sueldoOfrecido;
+	}
+
+	public Date getFechaVigencia() {
+		return this.fechaVigencia;
+	}
+
+	public void setFechaVigencia(Date fechaVigencia) {
+		this.fechaVigencia = fechaVigencia;
+	}
+
+	public EstadoOfertaLaboral getEstado() {
+		return this.estado;
+	}
+
+	public void setEstado(EstadoOfertaLaboral estado) {
+		this.estado = estado;
+	}
+
+	public Notificador getMedioNotificacion() {
+		return this.medioNotificacion;
+	}
+
+	public void setMedioNotificacion(Notificador medioNotificacion) {
+		this.medioNotificacion = medioNotificacion;
+	}
+
+	public Imagen getImagen() {
+		return this.imagen;
+	}
+
+	public void setImagen(Imagen imagen) {
+		this.imagen = imagen;
+	}
+
+	public Integer getPeriodoDeCierre() {
+		return this.periodoDeCierre;
+	}
+
+	public void setPeriodoDeCierre(Integer periodoDeCierre) {
+		this.periodoDeCierre = periodoDeCierre;
+	}
+
+	public Empresa getEmpresa() {
+		return this.empresa;
+	}
+
+	public void setEmpresa(Empresa empresa) {
+		this.empresa = empresa;
+	}
+
+    public void generarTitulo (){
+		this.titulo = categoria+" en "+tipoTrabajo+lugarTrabajo;
+    }
+
+	public boolean generarImagen(){
+		return true;
+	}
+
+	public boolean controlarRequisitos(Postulante postulante){
+		return true;
+	}
+}
