@@ -2,6 +2,7 @@ package controlador;
 import modelo.dominio.Idioma;
 import modelo.dominio.Pais;
 import modelo.dominio.Categoria;
+import java.util.List;
 public class ControladorConfiguracion{
 	private List<Idioma> idiomas;
 	private List<Pais> paises;
