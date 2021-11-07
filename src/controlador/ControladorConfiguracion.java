@@ -7,12 +7,18 @@ public class ControladorConfiguracion{
 	private List<Idioma> idiomas;
 	private List<Pais> paises;
 	private List<Categoria> categorias;
+	private static ControladorConfiguracion instancia;
 
 	// Constructores
-		public ControladorConfiguracion(){
+		private ControladorConfiguracion(){
 			this.idiomas = new List<Idioma>();
 			this.paises = new List<Pais>();
 			this.categorias = new List<Categoria>();
+		}
+		public ControladorEmpresa getInstancia(){
+			if (this.instancia == null)
+				this.instancia = new ControladorEmpresa();
+			return instancia;
 		}
 	// Collections:
 		public void agregarIdioma(String idioma){

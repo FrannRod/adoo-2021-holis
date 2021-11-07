@@ -4,10 +4,15 @@ import modelo.vo.EmpresaVO;
 import java.util.List;
 public class ControladorEmpresa{
 	private List<Empresa> empresas;
-
+	private static ControladorEmpresa instancia;
 	// Constructores
-		public ControladorEmpresa(){
+		private ControladorEmpresa(){
 			this.empresas = new List<Empresa>();
+		}
+		public ControladorEmpresa getInstancia(){
+			if (this.instancia == null)
+				this.instancia = new ControladorEmpresa();
+			return instancia;
 		}
 	// Collections:
 		public void agregarEmpresa(EmpresaVO vo){
