@@ -7,12 +7,11 @@ public class Imagen{
 	private Formato formato;
 
 	// Constructores:
-	public Imagen(String nombre, String apellido, String correo, Formato formato){
-		this.nombre = nombre;
-		this.apellido = apellido;
-		this.correo = correo;
+	public Imagen(String encabezado, String cuerpo, String pie, Formato formato){
+		this.encabezado = encabezado;
+		this.cuerpo = cuerpo;
+		this.pie = pie;
 		this.formato = formato;
-		
 	}
 
 	// Setters y Getters:
