@@ -4,7 +4,7 @@ import java.util.List;
 public class Empresa {
 	private String razonSocial;
 	private int cuit;
-	private Direccion direccion
+	private Direccion direccion;
 	private String correo;
 	private String telefono;
 	private String tipoDeEmpresa;
