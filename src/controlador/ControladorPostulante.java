@@ -1,6 +1,7 @@
 package controlador;
 import modelo.dominio.Postulante;
 import modelo.vo.PostulanteVO;
+import modelo.dominio.Categoria;
 import java.util.List;
 public class ControladorPostulante{
 	private List<Postulante> postulantes;
