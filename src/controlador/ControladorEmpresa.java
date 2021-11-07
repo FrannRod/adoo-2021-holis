@@ -27,7 +27,7 @@ public class ControladorEmpresa{
 										  );
 			this.empresas.add(empresa);
 		}
-		private Empresa buscarEmpresa(String cuit){
+		protected Empresa buscarEmpresa(String cuit){
 			Empresa resultado;
 			for (Empresa empresa : empresas) {
 				if (Empresa.getCuit() == cuit){

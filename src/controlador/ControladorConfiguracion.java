@@ -24,7 +24,7 @@ public class ControladorConfiguracion{
 		public void agregarIdioma(String idioma){
 			this.idiomas.add(new Idioma(idioma));
 		}
-		private Idioma buscarIdioma(String nombre){
+		protected Idioma buscarIdioma(String nombre){
 			Idioma resultado;
 			for (Idioma idioma : idiomas) {
 				if (idioma.getNombre() == nombre){
@@ -44,7 +44,7 @@ public class ControladorConfiguracion{
 		public void agregarPais(String pais){
 			this.paises.add(new Pais(pais));
 		}
-		private Pais buscarPais(String nombre){
+		protected Pais buscarPais(String nombre){
 			Pais resultado;
 			for (Pais pais : paises) {
 				if (pais.getNombre() == nombre){
@@ -63,7 +63,7 @@ public class ControladorConfiguracion{
 		public void agregarCategoria(String categoria){
 			this.categorias.add(new Categoria(categoria));
 		}
-		private Categoria buscarCategoria(String nombre){
+		protected Categoria buscarCategoria(String nombre){
 			Categoria resultado;
 			for (Categoria categoria : categorias) {
 				if (categoria.getNombre() == nombre){
