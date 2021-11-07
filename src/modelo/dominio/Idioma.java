@@ -1,7 +1,7 @@
 package modelo.dominio;
 public class Idioma{
 
-	String nombre;
+	private String nombre;
 
 	// Constructores:
 		public Idioma(String nombre){
