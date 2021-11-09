@@ -1,14 +1,11 @@
 package modelo.dominio;
-import modelo.dominio.moduloOfertaLab.EstadoOfertaLaboral;
-public class OfertaLaboral{
+
+public class OfertaLaboralVO{
     private String titulo;
-    private List<Postulante> postulantes;
-    private List<Tarea> descripcionDelPuesto;
     private Boolean modalidadContratoFullTime; 
     private Boolean tipoTrabajoRemoto;
     private Direccion lugarTrabajo;
     private Categoria categoria;
-    private List<Requisito> requisitos;
     private Float sueldoOfrecido; 
     private Date fechaVigencia;
     private EstadoOfertaLaboral estado; 
@@ -23,26 +20,6 @@ public class OfertaLaboral{
 
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
-	}
-
-	public List<Postulante> getPostulantes() {
-		return this.postulantes;
-	}
-
-	public void agregarPostulante(Postulante postulante){
-		this.postulantes.add(postulante);
-	}
-
-	public void eliminarPostulante(Postulante postulante){
-		this.postulantes.remove(postulante);
-	}
-
-	public List<Tarea> getDescripcionDelPuesto() {
-		return this.descripcionDelPuesto;
-	}
-
-	public void setDescripcionDelPuesto(List<Tarea> descripcionDelPuesto) {
-		this.descripcionDelPuesto = descripcionDelPuesto;
 	}
 
 	public Boolean getModalidadContratoFullTime() {
@@ -75,14 +52,6 @@ public class OfertaLaboral{
 
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
-	}
-
-	public List<Requisito> getRequisitos() {
-		return this.requisitos;
-	}
-
-	public void setRequisitos(List<Requisito> requisitos) {
-		this.requisitos = requisitos;
 	}
 
 	public Float getSueldoOfrecido() {
@@ -139,17 +108,5 @@ public class OfertaLaboral{
 
 	public void setEmpresa(Empresa empresa) {
 		this.empresa = empresa;
-	}
-
-    public void generarTitulo (){
-		this.titulo = categoria+" en "+tipoTrabajo+lugarTrabajo;
-    }
-
-	public boolean generarImagen(){
-		return true;
-	}
-
-	public boolean controlarRequisitos(Postulante postulante){
-		return true;
 	}
 }

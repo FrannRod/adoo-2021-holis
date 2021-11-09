@@ -45,12 +45,12 @@ public class ControladorPostulante{
 			Postulante postulante = this.buscarPostulante(vo);
 			if (postulante == null)
 				return false;
-			postulante.setNombre(vo.nombre);
-			postulante.setApellido(vo.apellido);
-			postulante.setFechaDeNacimiento(vo.fechaDeNacimiento);
-			postulante.setNacionalidad(vo.nacionalidad);
-			postulante.setUsuario(vo.usuario);
-			postulante.setContraseña(vo.contraseña);
+			postulante.setNombre(vo.getNombre());
+			postulante.setApellido(vo.getApellido());
+			postulante.setFechaDeNacimiento(vo.getFechaDeNacimiento());
+			postulante.setNacionalidad(vo.getNacionalidad());
+			postulante.setUsuario(vo.getUsuario());
+			postulante.setContraseña(vo.getContraseña());
 			return true;
 		}
 

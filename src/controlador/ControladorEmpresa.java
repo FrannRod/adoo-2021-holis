@@ -46,13 +46,13 @@ public class ControladorEmpresa{
 			Empresa empresa = this.buscarEmpresa(vo.cuit);
 			if (empresa == null)
 				return false;
-			empresa.setRazonSocial(vo.razonSocial);
-			empresa.setDireccion(vo.direccion);
-			empresa.setCorreo(vo.correo);
-			empresa.setTelefono(vo.telefono);
-			empresa.setTipoDeEmpresa(vo.tipoDeEmpresa);
-			empresa.setContraseña(vo.contraseña);
-			empresa.setUsuario(vo.usuario);
+			empresa.setRazonSocial(vo.getRazonSocial());
+			empresa.setDireccion(vo.getDireccion());
+			empresa.setCorreo(vo.getCorreo());
+			empresa.setTelefono(vo.getTelefono());
+			empresa.setTipoDeEmpresa(vo.getTipoDeEmpresa());
+			empresa.setContraseña(vo.getContraseña());
+			empresa.setUsuario(vo.getUsuario());
 			return true;
 		}
 }
