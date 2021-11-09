@@ -1,9 +1,11 @@
 package controlador;
 import modelo.dominio.OfertaLaboral;
 import modelo.dominio.Postulante;
+import modelo.dominio.Categoria;
 import modelo.vo.OfertaLaboralVO;
 import modelo.vo.PostulanteVO;
 import java.util.List;
+import java.util.Dictionary;
 public class ControladorOfertaLaboral{
 	private List<OfertaLaboral> ofertaLaboral;
 	private static ControladorOfertaLaboral instancia;
@@ -92,8 +94,25 @@ public class ControladorOfertaLaboral{
 			return true;
 		}
 	// Reportes:
-		public generarReporteMasPostulantes(Date fecha){}
-		public generarReporteCategorias(){}
+		public OfertaLaboral generarReporteMasPostulantes(Date fecha){
+			OfertaLaboral masPostulantes;
+			for (OfertaLaboral oferta : this.ofertaLaboral) {
+				if (oferta.getFechaVigencia() == fecha && oferta.getPostulantes().size() > masPostulantes.size())
+					masPostulantes = oferta;
+			}
+			return oferta;
+		}
+		public Dictionary<Categoria, Integer> generarReporteCategorias(){
+			Dictionary<Categoria, Integer> dic = new Dictionary<Categoria, Integer>();
+			Categoria cat;
+			for (OfertaLaboral oferta : this.ofertaLaboral) {
+				cat = oferta.getCategoria();
+				Integer cant = dic.get(cat);
+				cant = cant == null ? oferta.getPostulantes().size() : cant + oferta.getPostulantes().size();
+				dic.put(cat, cant);
+			}
+			return dic;
+		}
 		public generarReporteMasAccesible(){}
 		public generarReporteMasExigente(){}
 }
