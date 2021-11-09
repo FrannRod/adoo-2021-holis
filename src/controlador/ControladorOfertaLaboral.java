@@ -18,6 +18,7 @@ public class ControladorOfertaLaboral{
 		}
 	// Collections:
 		public void crearOfertaLaboral(OfertaLaboralVO vo){
+			Empresa empresa = ControladorEmpresa.getInstancia().buscarEmpresa(vo.empresaCuit);
 			OfertaLaboral oferta = new OfertaLaboral(	
 											vo.titulo,
 											vo.modalidadContratoFullTime,
@@ -30,7 +31,7 @@ public class ControladorOfertaLaboral{
 											vo.medioNotificacion,
 											vo.imagen,
 											vo.periodoDeCierre,
-											vo.empresa
+											empresa
 										  );
 			this.ofertaLaboral.add(oferta);
 			empresa.agregarOferta(oferta);

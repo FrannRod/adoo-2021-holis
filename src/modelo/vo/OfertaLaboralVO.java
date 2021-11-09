@@ -12,7 +12,7 @@ public class OfertaLaboralVO{
     private Notificador medioNotificacion; 
     private Imagen imagen; 
     private Integer periodoDeCierre;
-    private Empresa empresa; 
+    private String empresaCuit; 
 
 	public String getTitulo() {
 		return this.titulo;
@@ -102,11 +102,11 @@ public class OfertaLaboralVO{
 		this.periodoDeCierre = periodoDeCierre;
 	}
 
-	public Empresa getEmpresa() {
-		return this.empresa;
+	public String getEmpresa() {
+		return this.empresaCuit;
 	}
 
-	public void setEmpresa(Empresa empresa) {
-		this.empresa = empresa;
+	public void setEmpresa(String empresaCuit) {
+		this.empresaCuit = empresaCuit;
 	}
 }
