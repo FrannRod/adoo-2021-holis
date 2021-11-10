@@ -4,11 +4,11 @@ public interface EstadoOfertaLaboral{
 
     private Estado estado;
 
-    public boolean abrir(Empresa empresa, OfertaLaboral oferta){
-        this.estado = new Abierto(empresa, oferta);
+    public boolean abrir(OfertaLaboral oferta, int nSemanas){
+        this.estado = new Abierto(oferta, nSemanas);
     }
 
-    public boolean cerrar(Empresa empresa, OfertaLaboral oferta){
-        this.estado = new Cerrado(empresa, oferta);
+    public boolean cerrar(OfertaLaboral oferta){
+        this.estado = new Cerrado(oferta);
     }
 }

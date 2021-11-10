@@ -1,13 +1,18 @@
 package modelo.dominio.moduloOfertaLab;
+import java.utils.Date;
 
-public class Cerrado{
+public class Cerrado implements EstadoOfertaLaboral{
 
-    public boolean cerrar(Empresa empresa, OfertaLaboral oferta){
-        OfertaLaboral.setEstado = Cerrado; 
-        // acá no sé cómo preguntarle si quiere reabrir
+    public boolean cerrar(OfertaLaboral oferta){
     }
 
-    public boolean abrir(Empresa empresa, OfertaLaboral oferta){
-        EstadoOfertaLaboral.abrir(empresa, oferta);
+    public boolean abrir(OfertaLaboral oferta, int nSemanas){
+        // ver que no hayan pasado más de n días 
+        Date fechaVigencia = OfertaLaboral.getFechaVigencia() + nSemanas*7; 
+        Date fechaActual = new Date();  
+        //fechaVigencia + n < fechaActual
+        if ( fechaVigencia.after(fechaActual) ){
+            oferta.estado = new Abierto();
+        }
     }
 }

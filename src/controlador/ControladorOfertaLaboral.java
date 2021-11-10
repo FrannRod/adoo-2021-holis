@@ -79,7 +79,6 @@ public class ControladorOfertaLaboral{
 			oferta.estado.abrir();
 			return true;
 		}
-	
 		public boolean postularse(PostulanteVO postulanteVo, OfertaLaboralVO ofertaVo){
 			OfertaLaboral oferta = this.buscarOfertaLaboral(ofertaVo);
 			if (oferta == null)
@@ -113,6 +112,34 @@ public class ControladorOfertaLaboral{
 			}
 			return dic;
 		}
-		public generarReporteMasAccesible(){}
-		public generarReporteMasExigente(){}
+		public OfertaLaboral generarReporteMasAccesible(){
+			// trabajo part-time, remoto, con menor cantidad de tareas asignadas y menor cantidad de requisitos.
+			int minTareas = 9999;
+			int minRequisitos = 9999;
+			OfertaLaboral masAccesible = null;
+			for (OfertaLaboral oferta : this.ofertaLaboral) {
+				if (!oferta.getModalidadContratoFullTime() && oferta.getTipoTrabajoRemoto()){
+					if (oferta.getDescripcionDelPuesto().size() < minTareas){
+						if (oferta.getRequisitos.size() < minRequisitos){
+							minTareas = oferta.getDescripcionDelPuesto().size();
+							minRequisitos = oferta.getRequisitos().size(); 
+							masAccesible = oferta;
+						}
+					}
+				}
+			}
+			return masAccesible; 
+		}
+		public generarReporteMasExigente(){
+			//tiene mayor cantidad de requisitos.
+			int maxRequisitos = 0;
+			OfertaLaboral masExigente = null;
+			for (OfertaLaboral oferta : this.ofertaLaboral) {
+				if (oferta.getRequisitos.size() > maxRequisitos){
+					maxRequisitos = oferta.getRequisitos().size();
+					masExigente = oferta;
+				}
+			}
+			return masExigente;
+		}
 }
