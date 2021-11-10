@@ -1,5 +1,7 @@
 package modelo.dominio;
 import modelo.patrones.moduloEstadoOfertaLab.EstadoOfertaLaboral;
+import java.util.List;
+import java.util.Date;
 public class OfertaLaboral{
     private String titulo;
     private List<Postulante> postulantes;

@@ -1,9 +1,9 @@
 package modelo.dominio;
-public class requisito{
+public class Requisito{
 	private String nombre;
 
 	//Constructores:
-		public requisito(String nombre){
+		public Requisito(String nombre){
 			this.nombre = nombre;
 		}
 	// Setters y Getters:
