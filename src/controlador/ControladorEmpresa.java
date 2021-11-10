@@ -26,7 +26,7 @@ public class ControladorEmpresa{
 											vo.getCorreo(),
 											vo.getTelefono(),
 											vo.getTipoDeEmpresa(),
-											vo.getContraseña(),
+											vo.getContrasena(),
 											vo.getUsuario()
 										  );
 			this.empresas.add(empresa);
@@ -55,7 +55,7 @@ public class ControladorEmpresa{
 			empresa.setCorreo(vo.getCorreo());
 			empresa.setTelefono(vo.getTelefono());
 			empresa.setTipoDeEmpresa(vo.getTipoDeEmpresa());
-			empresa.setContraseña(vo.getContraseña());
+			empresa.setContrasena(vo.getContrasena());
 			empresa.setUsuario(vo.getUsuario());
 			return true;
 		}

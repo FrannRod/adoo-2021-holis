@@ -7,17 +7,17 @@ public class EmpresaVO {
 	private String correo;
 	private String telefono;
 	private String tipoDeEmpresa;
-	private String contraseña;
+	private String contrasena;
 	private String usuario;
 
 	// Constructores
-		public EmpresaVO(String razonSocial,int cuit,DireccionVO direccion,String correo,String telefono,String tipoDeEmpresa,String contraseña,String usuario){
+		public EmpresaVO(String razonSocial,int cuit,DireccionVO direccion,String correo,String telefono,String tipoDeEmpresa,String contrasena,String usuario){
 			this.razonSocial = razonSocial;
 			this.cuit = cuit;
 			this.direccion = direccion;
 			this.correo = correo;
 			this.tipoDeEmpresa = tipoDeEmpresa;
-			this.contraseña = contraseña;
+			this.contrasena = contrasena;
 			this.usuario = usuario;
 		}
 	// Setters y Getters:
@@ -45,11 +45,11 @@ public class EmpresaVO {
 		public void setTipoDeEmpresa(String tipoDeEmpresa){
 			this.tipoDeEmpresa = tipoDeEmpresa;
 		}
-		public String getContraseña(){
-			return contraseña;
+		public String getContrasena(){
+			return contrasena;
 		}
-		public void setContraseña(String contraseña){
-			this.contraseña = contraseña;
+		public void setContrasena(String contrasena){
+			this.contrasena = contrasena;
 		}
 		public String getUsuario(){
 			return usuario;

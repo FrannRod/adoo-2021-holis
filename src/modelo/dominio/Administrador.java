@@ -4,14 +4,14 @@ public class Administrador{
 	private String nombre;
 	private String apellido;
 	private String correo;
-	private String contraseña;
+	private String contrasena;
 
 	// Constructores:
-		public Administrador(String nombre, String apellido, String correo, String contraseña){
+		public Administrador(String nombre, String apellido, String correo, String contrasena){
 			this.nombre = nombre;
 			this.apellido = apellido;
 			this.correo = correo;
-			this.contraseña = contraseña;
+			this.contrasena = contrasena;
 		}
 		
 	// Setters y Getters:
@@ -36,10 +36,10 @@ public class Administrador{
 			return this.correo;
 		}
 
-		public void setContraseña(String contraseña){
-			this.contraseña = contraseña;
+		public void setContrasena(String contrasena){
+			this.contrasena = contrasena;
 		}
-		public String getContraseña(){
-			return this.contraseña;
+		public String getContrasena(){
+			return this.contrasena;
 		}
 }

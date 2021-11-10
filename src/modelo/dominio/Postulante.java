@@ -12,16 +12,16 @@ public class Postulante{
 	private ArrayList<OfertaLaboral> favoritos;
 	private ArrayList<OfertaLaboral> misPostulaciones;
 	private String usuario;
-	private String contraseña;
+	private String contrasena;
 
 	// Constructores
-		public Postulante(String nombre,String apellido,Date fechaDeNacimiento,Pais nacionalidad,String usuario,String contraseña){
+		public Postulante(String nombre,String apellido,Date fechaDeNacimiento,Pais nacionalidad,String usuario,String contrasena){
 			this.nombre = nombre;
 			this.apellido = apellido;
 			this.fechaDeNacimiento = fechaDeNacimiento;
 			this.nacionalidad = nacionalidad;
 			this.usuario = usuario;
-			this.contraseña = contraseña;
+			this.contrasena = contrasena;
 			this.idiomas = new ArrayList<Idioma>();
 			this.intereses = new ArrayList<Categoria>();
 			this.favoritos = new ArrayList<OfertaLaboral>();
@@ -61,11 +61,11 @@ public class Postulante{
 			this.nacionalidad = nacionalidad;
 		}
 
-		public String getContraseña(){
-			return contraseña;
+		public String getContrasena(){
+			return contrasena;
 		}
-		public void setContraseña(String contraseña){
-			this.contraseña = contraseña;
+		public void setContrasena(String contrasena){
+			this.contrasena = contrasena;
 		}
 		public String getUsuario(){
 			return usuario;

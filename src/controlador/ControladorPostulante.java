@@ -22,7 +22,7 @@ public class ControladorPostulante{
 											vo.fechaDeNacimiento,
 											vo.nacionalidad,
 											vo.usuario,
-											vo.contraseña
+											vo.contrasena
 										  );
 			this.postulantes.add(postulante);
 		}
@@ -50,7 +50,7 @@ public class ControladorPostulante{
 			postulante.setFechaDeNacimiento(vo.getFechaDeNacimiento());
 			postulante.setNacionalidad(vo.getNacionalidad());
 			postulante.setUsuario(vo.getUsuario());
-			postulante.setContraseña(vo.getContraseña());
+			postulante.setContrasena(vo.getContrasena());
 			return true;
 		}
 

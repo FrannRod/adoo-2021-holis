@@ -7,16 +7,16 @@ public class PostulanteVO{
 	private Date fechaDeNacimiento;
 	private Pais nacionalidad;
 	private String usuario;
-	private String contraseña;
+	private String contrasena;
 
 	// Constructores
-		public PostulanteVO(String nombre,String apellido,Date fechaDeNacimiento,Pais nacionalidad,String usuario,String contraseña){
+		public PostulanteVO(String nombre,String apellido,Date fechaDeNacimiento,Pais nacionalidad,String usuario,String contrasena){
 			this.nombre = nombre;
 			this.apellido = apellido;
 			this.fechaDeNacimiento = fechaDeNacimiento;
 			this.nacionalidad = nacionalidad;
 			this.usuario = usuario;
-			this.contraseña = contraseña;
+			this.contrasena = contrasena;
 		}
 
 	// Setters y Getters:
@@ -52,11 +52,11 @@ public class PostulanteVO{
 			this.nacionalidad = nacionalidad;
 		}
 
-		public String getContraseña(){
-			return contraseña;
+		public String getContrasena(){
+			return contrasena;
 		}
-		public void setContraseña(String contraseña){
-			this.contraseña = contraseña;
+		public void setContrasena(String contrasena){
+			this.contrasena = contrasena;
 		}
 		public String getUsuario(){
 			return usuario;
