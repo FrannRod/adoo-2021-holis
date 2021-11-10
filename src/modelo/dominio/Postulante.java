@@ -74,36 +74,36 @@ public class Postulante{
 			this.usuario = usuario;
 		}
 	// Collections:
-		public void agregarIdioma(Idioma idiomas){
+		public void agregarIdioma(Idioma idioma){
 			this.idiomas.add(idioma);
 		}
 
-		public void eliminarIdioma(Idioma idiomas){
+		public void eliminarIdioma(Idioma idioma){
 			this.idiomas.remove(idioma);
 		}
 
-		public void agregarInteres(Categoria intereses){
-			this.categoria.add(intereses);
+		public void agregarInteres(Categoria interes){
+			this.intereses.add(interes);
 		}
 
-		public void eliminarInteres(Categoria intereses){
-			this.categoria.remove(intereses);
+		public void eliminarInteres(Categoria interes){
+			this.intereses.remove(interes);
 		}
 
-		public void agregarFavorito(OfertaLaboral favoritos){
-			this.ofertaLaboral.add(favoritos);
+		public void agregarFavorito(OfertaLaboral favorito){
+			this.favoritos.add(favorito);
 		}
 
-		public void eliminarFavorito(OfertaLaboral favoritos){
-			this.ofertaLaboral.remove(favoritos);
+		public void eliminarFavorito(OfertaLaboral favorito){
+			this.favoritos.remove(favorito);
 		}
 
 		public void agregarPostulacion(OfertaLaboral misPostulaciones){
-			this.ofertaLaboral.add(misPostulaciones);
+			this.misPostulaciones.add(misPostulaciones);
 		}
 
 		public void eliminarPostulacion(OfertaLaboral misPostulaciones){
-			this.ofertaLaboral.remove(misPostulaciones);
+			this.misPostulaciones.remove(misPostulaciones);
 		}
 
 }

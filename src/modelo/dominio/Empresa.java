@@ -69,7 +69,7 @@ public class Empresa {
 		public Direccion getDireccion(){
 			return direccion;
 		}
-		public Direccion setDireccion(Direccion direccion){
+		public void setDireccion(Direccion direccion){
 			this.direccion = direccion;
 		}
 		public ArrayList<OfertaLaboral> getOfertas(){
