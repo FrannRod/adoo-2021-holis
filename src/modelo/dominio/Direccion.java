@@ -1,4 +1,5 @@
 package modelo.dominio;
+
 public class Direccion {
 	private String codigoPostal;
 	private Pais pais;
@@ -9,12 +10,12 @@ public class Direccion {
 
 	// Constructores:
 		public Direccion(String codigoPostal,Pais pais,String localidad,String calle,int numero,int piso){
-			this.codigoPostal = String codigoPostal;
-			this.pais = Pais pais;
-			this.localidad = String localidad;
-			this.calle = String calle;
-			this.numero = int numero;
-			this.piso = int piso;
+			this.codigoPostal = codigoPostal;
+			this.pais = pais;
+			this.localidad = localidad;
+			this.calle = calle;
+			this.numero = numero;
+			this.piso = piso;
 		}
 	// Setters y Getters:
 		public String getCodigoPostal(){
@@ -54,5 +55,3 @@ public class Direccion {
 			this.piso = piso;
 		}
 }
-
-//hola
