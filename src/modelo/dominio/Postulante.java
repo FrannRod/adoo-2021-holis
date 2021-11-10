@@ -49,8 +49,8 @@ public class Postulante{
 			return fechaDeNacimiento;
 		}
 
-		public void setFechaDeNacimiento(){
-			this.fechaDeNacimiento = fechaDeNacimiento;
+		public void setFechaDeNacimiento(Date fecha){
+			this.fechaDeNacimiento = fecha;
 		}
 
 		public Pais getNacionalidad(){
