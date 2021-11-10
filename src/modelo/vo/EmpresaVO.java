@@ -14,7 +14,7 @@ public class EmpresaVO {
 		public EmpresaVO(String razonSocial,int cuit,DireccionVO direccion,String correo,String telefono,String tipoDeEmpresa,String contraseña,String usuario){
 			this.razonSocial = razonSocial;
 			this.cuit = cuit;
-			this.direccio = direccio;
+			this.direccion = direccion;
 			this.correo = correo;
 			this.tipoDeEmpresa = tipoDeEmpresa;
 			this.contraseña = contraseña;
