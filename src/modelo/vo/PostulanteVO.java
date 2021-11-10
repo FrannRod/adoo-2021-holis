@@ -40,8 +40,8 @@ public class PostulanteVO{
 			return fechaDeNacimiento;
 		}
 
-		public void setFechaDeNacimiento(){
-			this.fechaDeNacimiento = fechaDeNacimiento;
+		public void setFechaDeNacimiento(Date fecha){
+			this.fechaDeNacimiento = fecha;
 		}
 
 		public Pais getNacionalidad(){
@@ -65,3 +65,4 @@ public class PostulanteVO{
 			this.usuario = usuario;
 		}
 }
+//TODO: COMO EN OFERTA LABORAL VO ESTA CLASE VO TAMPOCO ENTIENDE QUE ES PAIS, HAY QUE IMPORTARLO?
