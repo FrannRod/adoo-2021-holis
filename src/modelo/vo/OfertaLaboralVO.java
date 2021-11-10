@@ -1,4 +1,4 @@
-package modelo.dominio;
+package modelo.vo;
 import java.util.Date;
 
 public class OfertaLaboralVO{
@@ -111,3 +111,4 @@ public class OfertaLaboralVO{
 		this.empresaCuit = empresaCuit;
 	}
 }
+//TODO: ESTE CONTROLADOR Y LA CLASE VO DE OFERTA LABORAL NO ENTIENDEN QUE ES CATEGORIA, IMAGEN, ESTADO, NOTIFICADOR, DIRECCIOM. HAY QUE IMPORTARLO? 

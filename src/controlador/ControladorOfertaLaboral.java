@@ -21,7 +21,7 @@ public class ControladorOfertaLaboral{
 		}
 	// Collections:
 		public void crearOfertaLaboral(OfertaLaboralVO vo){
-			Empresa empresa = ControladorEmpresa.getInstancia().buscarEmpresa(vo.empresaCuit);
+			Empresa empresa = ControladorEmpresa.getInstancia().buscarEmpresa(vo.empresaCuit);//TODO: NO RECONOCE QUE ES EMPRESA FALTA EL IMPORT
 			OfertaLaboral oferta = new OfertaLaboral(	
 											vo.titulo,
 											vo.modalidadContratoFullTime,
@@ -42,8 +42,8 @@ public class ControladorOfertaLaboral{
 		protected OfertaLaboral buscarOfertaLaboral(OfertaLaboralVO vo){
 			OfertaLaboral resultado;
 			for (OfertaLaboral oferta : ofertaLaboral) {
-				if (oferta.getCuit() == vo.getTitulo() && oferta.getEmpresa() == vo.getEmpresa()){
-					resultado = OfertaLaboral;
+				if (oferta.getCuit() == vo.getTitulo() && oferta.getEmpresa() == vo.getEmpresa()){//TODO:NO EXISTE EN LA OFERTA LABORAL EL CUIT NI EL METODO GET CUIT
+					resultado = OfertaLaboral;//TODO: ACA MO DEVOLVERIA OFERTA?
 					break;
 				}
 			}	
@@ -70,14 +70,14 @@ public class ControladorOfertaLaboral{
 			OfertaLaboral oferta = this.buscarOfertaLaboral(vo);
 			if (oferta == null)
 				return false;
-			oferta.estado.cerrar();
+			oferta.estado.cerrar();//TODO: DICE QUE NO PUEDE VER EL ESTADO IMAGINO QUE PORQUE ES PRIVATE
 			return true;
 		}
 		public boolean reabrirOfertaLaboral(OfertaLaboralVO vo){
 			OfertaLaboral oferta = this.buscarOfertaLaboral(vo);
 			if (oferta == null)
 				return false;
-			oferta.estado.abrir();
+			oferta.estado.abrir();//TODO: DICE QUE NO PUEDE VER EL ESTADO IMAGINO QUE PORQUE ES PRIVATE
 			return true;
 		}
 		public boolean postularse(PostulanteVO postulanteVo, OfertaLaboralVO ofertaVo){
@@ -100,7 +100,7 @@ public class ControladorOfertaLaboral{
 				if (oferta.getFechaVigencia() == fecha && oferta.getPostulantes().size() > masPostulantes.size())
 					masPostulantes = oferta;
 			}
-			return oferta;
+			return oferta;//TODO: ACA NO DEVUELVE MAS POSTULANTES?
 		}
 		public Dictionary<Categoria, Integer> generarReporteCategorias(){
 			Dictionary<Categoria, Integer> dic = new Dictionary<Categoria, Integer>();
@@ -121,7 +121,7 @@ public class ControladorOfertaLaboral{
 			for (OfertaLaboral oferta : this.ofertaLaboral) {
 				if (!oferta.getModalidadContratoFullTime() && oferta.getTipoTrabajoRemoto()){
 					if (oferta.getDescripcionDelPuesto().size() < minTareas){
-						if (oferta.getRequisitos.size() < minRequisitos){
+						if (oferta.getRequisitos().size() < minRequisitos){
 							minTareas = oferta.getDescripcionDelPuesto().size();
 							minRequisitos = oferta.getRequisitos().size(); 
 							masAccesible = oferta;
@@ -131,12 +131,12 @@ public class ControladorOfertaLaboral{
 			}
 			return masAccesible; 
 		}
-		public generarReporteMasExigente(){
+		public generarReporteMasExigente(){//TODO: FALTA QUE TIPO VA A DEVOLVER LA FUNCION
 			//tiene mayor cantidad de requisitos.
 			int maxRequisitos = 0;
 			OfertaLaboral masExigente = null;
 			for (OfertaLaboral oferta : this.ofertaLaboral) {
-				if (oferta.getRequisitos.size() > maxRequisitos){
+				if (oferta.getRequisitos().size() > maxRequisitos){
 					maxRequisitos = oferta.getRequisitos().size();
 					masExigente = oferta;
 				}
