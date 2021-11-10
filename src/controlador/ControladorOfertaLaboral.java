@@ -15,8 +15,8 @@ public class ControladorOfertaLaboral{
 			this.ofertaLaboral = new ArrayList<OfertaLaboral>();
 		}
 		public static ControladorOfertaLaboral getInstancia(){
-			if (this.instancia == null)
-				this.instancia = new ControladorOfertaLaboral();
+			if (instancia == null)
+				instancia = new ControladorOfertaLaboral();
 			return instancia;
 		}
 	// Collections:

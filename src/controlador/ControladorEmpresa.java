@@ -10,8 +10,8 @@ public class ControladorEmpresa{
 			this.empresas = new ArrayList<Empresa>();
 		}
 		public static ControladorEmpresa getInstancia(){
-			if (this.instancia == null)
-				this.instancia = new ControladorEmpresa();
+			if (instancia == null)
+				instancia = new ControladorEmpresa();
 			return instancia;
 		}
 	// Collections:

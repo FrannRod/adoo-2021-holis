@@ -11,8 +11,8 @@ public class ControladorPostulante{
 			this.postulantes = new ArrayList<Postulante>();
 		}
 		public static ControladorPostulante getInstancia(){
-			if (this.instancia == null)
-				this.instancia = new ControladorPostulante();
+			if (instancia == null)
+				instancia = new ControladorPostulante();
 			return instancia;
 		}
 	// Collections:

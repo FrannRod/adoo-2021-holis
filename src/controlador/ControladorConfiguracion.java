@@ -16,8 +16,8 @@ public class ControladorConfiguracion{
 			this.categorias = new ArrayList<Categoria>();
 		}
 		public static ControladorEmpresa getInstancia(){
-			if (this.instancia == null)
-				this.instancia = new ControladorEmpresa();
+			if (instancia == null)
+				instancia = new ControladorEmpresa();
 			return instancia;
 		}
 	// Collections:
