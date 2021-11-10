@@ -1,5 +1,5 @@
 package modelo.dominio;
-import modelo.dominio.moduloOfertaLab.EstadoOfertaLaboral;
+import modelo.patrones.moduloEstadoOfertaLab.EstadoOfertaLaboral;
 public class OfertaLaboral{
     private String titulo;
     private List<Postulante> postulantes;

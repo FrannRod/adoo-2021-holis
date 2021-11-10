@@ -1,4 +1,4 @@
-package modelo.patrones.moduloOfertaLab;
+package modelo.patrones.moduloEstadoOfertaLab;
 
 
 public class Abierto implements EstadoOfertaLaboral{

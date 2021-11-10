@@ -1,4 +1,4 @@
-package modelo.patrones.moduloOfertaLab;
+package modelo.patrones.moduloEstadoOfertaLab;
 import java.utils.Date;
 
 public class Cerrado implements EstadoOfertaLaboral{
