@@ -1,4 +1,4 @@
-package modelo.dominio.moduloOfertaLab;
+package modelo.patrones.moduloOfertaLab;
 
 public interface EstadoOfertaLaboral{
 

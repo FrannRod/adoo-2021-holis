@@ -1,4 +1,4 @@
-package modelo.moduloNotificaciones;
+package modelo.patrones.moduloNotificaciones;
 
 public class Notificacion {
 	private String emailDestinatario;

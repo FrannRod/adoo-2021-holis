@@ -1,4 +1,4 @@
-package modelo.moduloNotificaciones.estrategias;
+package modelo.patrones.moduloNotificaciones.estrategias;
 
 import moduloNotificaciones.Notificacion;
 

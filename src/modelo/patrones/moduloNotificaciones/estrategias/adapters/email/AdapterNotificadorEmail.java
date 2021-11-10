@@ -1,4 +1,4 @@
-package modelo.moduloNotificaciones.estrategias.adapters.email;
+package modelo.patrones.moduloNotificaciones.estrategias.adapters.email;
 
 import moduloNotificaciones.Notificacion;
 
