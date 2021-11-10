@@ -30,29 +30,28 @@ public class ControladorEmpresa{
 											vo.getUsuario()
 										  );
 			this.empresas.add(empresa);
-			System.out.println("Empresa " + vo.razonSocial + " creada");
+			System.out.println("Empresa " + vo.getRazonSocial() + " creada");
 		}
-		protected Empresa buscarEmpresa(String cuit){
+		protected Empresa buscarEmpresa(Integer cuit){
 			Empresa resultado;
 			for (Empresa empresa : empresas) {
-				if (Empresa.getCuit() == cuit){
-					resultado = Empresa;
+				if (empresa.getCuit() == cuit){
+					resultado = empresa;
 					break;
 				}
 			}
 			return resultado;
 		}
-		public void eliminarEmpresa(String cuit){
+		public void eliminarEmpresa(Integer cuit){
 			Empresa elemento = this.buscarEmpresa(cuit);
 			if (elemento != null)
 				this.empresas.remove(elemento);
 		}
 		public boolean modificarEmpresa(EmpresaVO vo){
-			Empresa empresa = this.buscarEmpresa(vo.cuit);
+			Empresa empresa = this.buscarEmpresa(vo.getCuit());
 			if (empresa == null)
 				return false;
 			empresa.setRazonSocial(vo.getRazonSocial());
-			empresa.setDireccion(vo.getDireccion());
 			empresa.setCorreo(vo.getCorreo());
 			empresa.setTelefono(vo.getTelefono());
 			empresa.setTipoDeEmpresa(vo.getTipoDeEmpresa());
