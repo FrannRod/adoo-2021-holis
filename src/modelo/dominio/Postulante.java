@@ -73,6 +73,9 @@ public class Postulante{
 		public void setUsuario(String usuario){
 			this.usuario = usuario;
 		}
+		public ArrayList<Categoria> getintereses(){
+			return this.intereses;
+		}
 	// Collections:
 		public void agregarIdioma(Idioma idioma){
 			this.idiomas.add(idioma);

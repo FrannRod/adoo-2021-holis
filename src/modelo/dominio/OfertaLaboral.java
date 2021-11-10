@@ -154,6 +154,14 @@ public class OfertaLaboral{
 	}
 
 	public boolean controlarRequisitos(Postulante postulante){
-		return true;
+		ArrayList<Categoria> intereses= postulante.getintereses();
+		boolean cumple=false;
+		for (Categoria interes : intereses) {
+			if(interes==this.categoria){
+				cumple=true;
+				break;
+			}
+		}
+		return cumple;
 	}
 }
