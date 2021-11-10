@@ -16,14 +16,14 @@ public class ControladorEmpresa{
 		}
 	// Collections:
 		public void agregarEmpresa(EmpresaVO vo){
-			Empresa empresa = new Empresa(	vo.razonSocial,
-											vo.cuit,
-											vo.direccion,
-											vo.correo,
-											vo.telefono,
-											vo.tipoDeEmpresa,
-											vo.contraseña,
-											vo.usuario
+			Empresa empresa = new Empresa(	vo.getRazonSocial(),
+											vo.getCuit(),
+											vo.getDireccion(),
+											vo.getCorreo(),
+											vo.getTelefono(),
+											vo.getTipoDeEmpresa(),
+											vo.getContraseña(),
+											vo.getUsuario()
 										  );
 			this.empresas.add(empresa);
 			System.out.println("Empresa " + vo.razonSocial + " creada");
