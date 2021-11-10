@@ -15,7 +15,7 @@ public class ControladorConfiguracion{
 			this.paises = new List<Pais>();
 			this.categorias = new List<Categoria>();
 		}
-		public ControladorEmpresa getInstancia(){
+		public static ControladorEmpresa getInstancia(){
 			if (this.instancia == null)
 				this.instancia = new ControladorEmpresa();
 			return instancia;

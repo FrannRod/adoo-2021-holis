@@ -10,7 +10,7 @@ public class ControladorPostulante{
 		private ControladorPostulante(){
 			this.postulantes = new List<Postulante>();
 		}
-		public ControladorPostulante getInstancia(){
+		public static ControladorPostulante getInstancia(){
 			if (this.instancia == null)
 				this.instancia = new ControladorPostulante();
 			return instancia;

@@ -13,7 +13,7 @@ public class ControladorOfertaLaboral{
 		private ControladorOfertaLaboral(){
 			this.ofertaLaboral = new List<OfertaLaboral>();
 		}
-		public ControladorOfertaLaboral getInstancia(){
+		public static ControladorOfertaLaboral getInstancia(){
 			if (this.instancia == null)
 				this.instancia = new ControladorOfertaLaboral();
 			return instancia;

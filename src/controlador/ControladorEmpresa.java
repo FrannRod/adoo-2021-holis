@@ -9,7 +9,7 @@ public class ControladorEmpresa{
 		private ControladorEmpresa(){
 			this.empresas = new List<Empresa>();
 		}
-		public ControladorEmpresa getInstancia(){
+		public static ControladorEmpresa getInstancia(){
 			if (this.instancia == null)
 				this.instancia = new ControladorEmpresa();
 			return instancia;
