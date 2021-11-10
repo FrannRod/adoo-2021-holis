@@ -1,6 +1,6 @@
 package modelo.patrones.moduloNotificaciones;
 
-import moduloNotificaciones.estrategias.EstrategiaDeNotificacion;
+import modelo.patrones.moduloNotificaciones.estrategias.EstrategiaDeNotificacion;
 
 public class Notificador {
 	private EstrategiaDeNotificacion estrategia;

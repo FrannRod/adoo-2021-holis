@@ -1,5 +1,7 @@
 package modelo.dominio;
 import modelo.patrones.moduloEstadoOfertaLab.EstadoOfertaLaboral;
+import modelo.patrones.moduloNotificaciones.Notificador;
+import modelo.patrones.moduloImagen.Imagen;
 import java.util.List;
 import java.util.Date;
 public class OfertaLaboral{
