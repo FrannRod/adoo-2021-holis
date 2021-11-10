@@ -7,6 +7,6 @@ public class Abierto implements EstadoOfertaLaboral{
     }
 
     public boolean cerrar(OfertaLaboral oferta){
-        oferta.estado = new Cerrado();
+        oferta.estado = new Cerrado();//TODO: NO PODES ACCEDER AL ESTADO ES PRIVADO
     }
 }
