@@ -3,7 +3,7 @@ package modelo.vo;
 public class EmpresaVO {
 	private String razonSocial;
 	private int cuit;
-	private Direccion direccion;
+	private DireccionVO direccion;
 	private String correo;
 	private String telefono;
 	private String tipoDeEmpresa;
@@ -11,7 +11,7 @@ public class EmpresaVO {
 	private String usuario;
 
 	// Constructores
-		public EmpresaVO(String razonSocial,int cuit,Direccion direccion,String correo,String telefono,String tipoDeEmpresa,String contraseña,String usuario){
+		public EmpresaVO(String razonSocial,int cuit,DireccionVO direccion,String correo,String telefono,String tipoDeEmpresa,String contraseña,String usuario){
 			this.razonSocial = razonSocial;
 			this.cuit = cuit;
 			this.direccio = direccio;
@@ -63,10 +63,10 @@ public class EmpresaVO {
 		public void setTelefono(String telefono){
 			this.telefono = telefono;
 		}
-		public Direccion getDireccion(){
+		public DireccionVO getDireccion(){
 			return direccion;
 		}
-		public Direccion setDireccion(String direccion){
+		public DireccionVO setDireccion(String direccion){
 			this.direccion = direccion;
 		}
 }
