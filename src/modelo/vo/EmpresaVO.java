@@ -66,7 +66,7 @@ public class EmpresaVO {
 		public DireccionVO getDireccion(){
 			return direccion;
 		}
-		public DireccionVO setDireccion(String direccion){
+		public void setDireccion(DireccionVO direccion){
 			this.direccion = direccion;
 		}
 }
