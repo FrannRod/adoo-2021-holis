@@ -1,4 +1,5 @@
 package controlador;
+import java.util.Date;
 import modelo.dominio.OfertaLaboral;
 import modelo.dominio.Postulante;
 import modelo.dominio.Categoria;

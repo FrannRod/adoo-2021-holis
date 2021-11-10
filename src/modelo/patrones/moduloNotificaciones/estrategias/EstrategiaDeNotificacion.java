@@ -1,6 +1,6 @@
 package modelo.patrones.moduloNotificaciones.estrategias;
 
-import moduloNotificaciones.Notificacion;
+import modelo.dominio.Notificacion;
 
 public interface EstrategiaDeNotificacion {
 	public void enviar(Notificacion notificacion);

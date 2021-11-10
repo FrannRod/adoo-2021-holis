@@ -1,4 +1,5 @@
 package modelo.dominio;
+import java.util.Date;
 
 public class OfertaLaboralVO{
     private String titulo;

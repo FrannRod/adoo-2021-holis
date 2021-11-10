@@ -3,16 +3,16 @@ package modelo.vo;
 public class DireccionVO {
 
 	private String codigoPostal;
-	private Pais pais;
+	private String nombrePais;
 	private String localidad;
 	private String calle;
 	private int numero;
 	private int piso;
 
 	// Constructores:
-		public DireccionVO(String codigoPostal,Pais pais,String localidad,String calle,int numero,int piso){
+		public DireccionVO(String codigoPostal,String nombrePais,String localidad,String calle,int numero,int piso){
 			this.codigoPostal = codigoPostal;
-			this.pais = pais;
+			this.nombrePais = nombrePais;
 			this.localidad = localidad;
 			this.calle = calle;
 			this.numero = numero;
@@ -25,11 +25,11 @@ public class DireccionVO {
 		public void setCodigoPostal(String codigoPostal){
 			this.codigoPostal = codigoPostal;
 		}
-		public Pais getPais(){
-			return pais;
+		public String getPais(){
+			return nombrePais;
 		}
-		public void setPais(Pais pais){
-			this.pais = pais;
+		public void setPais(String nombrePais){
+			this.nombrePais = nombrePais;
 		}
 		public String getLocalidad(){
 			return localidad;

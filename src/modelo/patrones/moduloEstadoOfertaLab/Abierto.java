@@ -1,4 +1,5 @@
 package modelo.patrones.moduloEstadoOfertaLab;
+import modelo.dominio.OfertaLaboral;
 
 
 public class Abierto implements EstadoOfertaLaboral{

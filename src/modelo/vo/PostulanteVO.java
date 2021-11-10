@@ -1,4 +1,5 @@
 package modelo.vo;
+import java.util.Date;
 public class PostulanteVO{
 
 	private String nombre;
