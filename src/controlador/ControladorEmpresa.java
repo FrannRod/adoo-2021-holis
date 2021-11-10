@@ -33,7 +33,7 @@ public class ControladorEmpresa{
 			System.out.println("Empresa " + vo.getRazonSocial() + " creada");
 		}
 		protected Empresa buscarEmpresa(Integer cuit){
-			Empresa resultado;
+			Empresa resultado = null;
 			for (Empresa empresa : empresas) {
 				if (empresa.getCuit() == cuit){
 					resultado = empresa;

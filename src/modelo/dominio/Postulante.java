@@ -75,35 +75,35 @@ public class Postulante{
 		}
 	// Collections:
 		public void agregarIdioma(Idioma idiomas){
-			this.Idiomas.add(idioma);
+			this.idiomas.add(idioma);
 		}
 
 		public void eliminarIdioma(Idioma idiomas){
-			this.Idiomas.remove(idioma);
+			this.idiomas.remove(idioma);
 		}
 
 		public void agregarInteres(Categoria intereses){
-			this.Categoria.add(intereses);
+			this.categoria.add(intereses);
 		}
 
 		public void eliminarInteres(Categoria intereses){
-			this.Categoria.remove(intereses);
+			this.categoria.remove(intereses);
 		}
 
 		public void agregarFavorito(OfertaLaboral favoritos){
-			this.OfertaLaboral.add(favoritos);
+			this.ofertaLaboral.add(favoritos);
 		}
 
 		public void eliminarFavorito(OfertaLaboral favoritos){
-			this.OfertaLaboral.remove(favoritos);
+			this.ofertaLaboral.remove(favoritos);
 		}
 
 		public void agregarPostulacion(OfertaLaboral misPostulaciones){
-			this.OfertaLaboral.add(misPostulaciones);
+			this.ofertaLaboral.add(misPostulaciones);
 		}
 
 		public void eliminarPostulacion(OfertaLaboral misPostulaciones){
-			this.OfertaLaboral.remove(misPostulaciones);
+			this.ofertaLaboral.remove(misPostulaciones);
 		}
 
 }

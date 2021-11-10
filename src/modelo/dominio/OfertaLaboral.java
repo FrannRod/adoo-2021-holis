@@ -146,7 +146,7 @@ public class OfertaLaboral{
 	}
 
     public void generarTitulo (){
-		this.titulo = categoria+" en "+tipoTrabajo+lugarTrabajo;
+		this.titulo = categoria+" en "+lugarTrabajo;
     }
 
 	public boolean generarImagen(){
