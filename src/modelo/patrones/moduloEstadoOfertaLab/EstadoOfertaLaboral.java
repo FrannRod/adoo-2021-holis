@@ -2,13 +2,9 @@ package modelo.patrones.moduloEstadoOfertaLab;
 
 public interface EstadoOfertaLaboral{
 
-    private Estado estado;
+    // private Estado estado;
 
-    public boolean abrir(OfertaLaboral oferta, int nSemanas){
-        this.estado = new Abierto(oferta, nSemanas);
-    }
+    public boolean abrir(OfertaLaboral oferta, int nSemanas);
 
-    public boolean cerrar(OfertaLaboral oferta){
-        this.estado = new Cerrado(oferta);
-    }
+    public boolean cerrar(OfertaLaboral oferta);
 }
