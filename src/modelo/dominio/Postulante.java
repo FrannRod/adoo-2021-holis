@@ -20,10 +20,10 @@ public class Postulante{
 			this.nacionalidad = nacionalidad;
 			this.usuario = usuario;
 			this.contraseña = contraseña;
-			this.idiomas = new List<Idioma>()
-			this.intereses = new List<Categoria>()
-			this.favoritos = new List<OfertaLaboral>()
-			this.misPostulaciones = new List<OfertaLaboral>()
+			this.idiomas = new List<Idioma>();
+			this.intereses = new List<Categoria>();
+			this.favoritos = new List<OfertaLaboral>();
+			this.misPostulaciones = new List<OfertaLaboral>();
 		}
 
 	// Setters y Getters:

@@ -22,7 +22,7 @@ public class Direccion {
 			return codigoPostal;
 		}
 		public void setCodigoPostal(String codigoPostal){
-			this.codigoPostal = codigoPostal
+			this.codigoPostal = codigoPostal;
 		}
 		public Pais getPais(){
 			return pais;
@@ -40,7 +40,7 @@ public class Direccion {
 			return calle;
 		}
 		public void setCalle(String calle){
-			this.calle = calle
+			this.calle = calle;
 		}
 		public int getNumero(){
 			return numero;
