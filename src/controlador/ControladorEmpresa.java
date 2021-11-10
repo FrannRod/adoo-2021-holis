@@ -1,13 +1,13 @@
 package controlador;
 import modelo.dominio.Empresa;
 import modelo.vo.EmpresaVO;
-import java.util.List;
+import java.util.ArrayList;
 public class ControladorEmpresa{
-	private List<Empresa> empresas;
+	private ArrayList<Empresa> empresas;
 	private static ControladorEmpresa instancia;
 	// Constructores
 		private ControladorEmpresa(){
-			this.empresas = new List<Empresa>();
+			this.empresas = new ArrayList<Empresa>();
 		}
 		public static ControladorEmpresa getInstancia(){
 			if (this.instancia == null)

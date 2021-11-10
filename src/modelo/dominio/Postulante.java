@@ -1,16 +1,16 @@
 package modelo.dominio;
 import java.util.Date;
-import java.util.List;
+import java.util.ArrayList;
 public class Postulante{
 
 	private String nombre;
 	private String apellido;
 	private Date fechaDeNacimiento;
 	private Pais nacionalidad;
-	private List<Idioma> idiomas;
-	private List<Categoria> intereses;
-	private List<OfertaLaboral> favoritos;
-	private List<OfertaLaboral> misPostulaciones;
+	private ArrayList<Idioma> idiomas;
+	private ArrayList<Categoria> intereses;
+	private ArrayList<OfertaLaboral> favoritos;
+	private ArrayList<OfertaLaboral> misPostulaciones;
 	private String usuario;
 	private String contraseña;
 
@@ -22,10 +22,10 @@ public class Postulante{
 			this.nacionalidad = nacionalidad;
 			this.usuario = usuario;
 			this.contraseña = contraseña;
-			this.idiomas = new List<Idioma>();
-			this.intereses = new List<Categoria>();
-			this.favoritos = new List<OfertaLaboral>();
-			this.misPostulaciones = new List<OfertaLaboral>();
+			this.idiomas = new ArrayList<Idioma>();
+			this.intereses = new ArrayList<Categoria>();
+			this.favoritos = new ArrayList<OfertaLaboral>();
+			this.misPostulaciones = new ArrayList<OfertaLaboral>();
 		}
 
 	// Setters y Getters:

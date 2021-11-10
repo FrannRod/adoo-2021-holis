@@ -2,18 +2,18 @@ package controlador;
 import modelo.dominio.Idioma;
 import modelo.dominio.Pais;
 import modelo.dominio.Categoria;
-import java.util.List;
+import java.util.ArrayList;
 public class ControladorConfiguracion{
-	private List<Idioma> idiomas;
-	private List<Pais> paises;
-	private List<Categoria> categorias;
+	private ArrayList<Idioma> idiomas;
+	private ArrayList<Pais> paises;
+	private ArrayList<Categoria> categorias;
 	private static ControladorConfiguracion instancia;
 
 	// Constructores
 		private ControladorConfiguracion(){
-			this.idiomas = new List<Idioma>();
-			this.paises = new List<Pais>();
-			this.categorias = new List<Categoria>();
+			this.idiomas = new ArrayList<Idioma>();
+			this.paises = new ArrayList<Pais>();
+			this.categorias = new ArrayList<Categoria>();
 		}
 		public static ControladorEmpresa getInstancia(){
 			if (this.instancia == null)

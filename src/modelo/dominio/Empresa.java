@@ -1,5 +1,5 @@
 package modelo.dominio;
-import java.util.List;
+import java.util.ArrayList;
 
 public class Empresa {
 	private String razonSocial;
@@ -8,7 +8,7 @@ public class Empresa {
 	private String correo;
 	private String telefono;
 	private String tipoDeEmpresa;
-	private List<OfertaLaboral> ofertas;
+	private ArrayList<OfertaLaboral> ofertas;
 	private String contraseña;
 	private String usuario;
 
@@ -21,7 +21,7 @@ public class Empresa {
 			this.tipoDeEmpresa = tipoDeEmpresa;
 			this.contraseña = contraseña;
 			this.usuario = usuario;
-			this.ofertas = new List<OfertaLaboral> ();
+			this.ofertas = new ArrayList<OfertaLaboral> ();
 		}
 	// Setters y Getters:
 		public String getRazonSocial(){
@@ -72,7 +72,7 @@ public class Empresa {
 		public Direccion setDireccion(String direccion){
 			this.direccion = direccion;
 		}
-		public List<OfertaLaboral> getOfertas(){
+		public ArrayList<OfertaLaboral> getOfertas(){
 			return ofertas;
 		}
 	// Collections:

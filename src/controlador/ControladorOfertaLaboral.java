@@ -5,14 +5,14 @@ import modelo.dominio.Postulante;
 import modelo.dominio.Categoria;
 import modelo.vo.OfertaLaboralVO;
 import modelo.vo.PostulanteVO;
-import java.util.List;
+import java.util.ArrayList;
 import java.util.Dictionary;
 public class ControladorOfertaLaboral{
-	private List<OfertaLaboral> ofertaLaboral;
+	private ArrayList<OfertaLaboral> ofertaLaboral;
 	private static ControladorOfertaLaboral instancia;
 	// Constructores
 		private ControladorOfertaLaboral(){
-			this.ofertaLaboral = new List<OfertaLaboral>();
+			this.ofertaLaboral = new ArrayList<OfertaLaboral>();
 		}
 		public static ControladorOfertaLaboral getInstancia(){
 			if (this.instancia == null)

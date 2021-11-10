@@ -2,13 +2,13 @@ package controlador;
 import modelo.dominio.Postulante;
 import modelo.vo.PostulanteVO;
 import modelo.dominio.Categoria;
-import java.util.List;
+import java.util.ArrayList;
 public class ControladorPostulante{
-	private List<Postulante> postulantes;
+	private ArrayList<Postulante> postulantes;
 	private static ControladorPostulante instancia;
 	// Constructores
 		private ControladorPostulante(){
-			this.postulantes = new List<Postulante>();
+			this.postulantes = new ArrayList<Postulante>();
 		}
 		public static ControladorPostulante getInstancia(){
 			if (this.instancia == null)

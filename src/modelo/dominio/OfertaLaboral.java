@@ -2,17 +2,17 @@ package modelo.dominio;
 import modelo.patrones.moduloEstadoOfertaLab.EstadoOfertaLaboral;
 import modelo.patrones.moduloNotificaciones.Notificador;
 import modelo.patrones.moduloImagen.Imagen;
-import java.util.List;
+import java.util.ArrayList;
 import java.util.Date;
 public class OfertaLaboral{
     private String titulo;
-    private List<Postulante> postulantes;
-    private List<Tarea> descripcionDelPuesto;
+    private ArrayList<Postulante> postulantes;
+    private ArrayList<Tarea> descripcionDelPuesto;
     private Boolean modalidadContratoFullTime; 
     private Boolean tipoTrabajoRemoto;
     private Direccion lugarTrabajo;
     private Categoria categoria;
-    private List<Requisito> requisitos;
+    private ArrayList<Requisito> requisitos;
     private Float sueldoOfrecido; 
     private Date fechaVigencia;
     private EstadoOfertaLaboral estado; 
@@ -29,7 +29,7 @@ public class OfertaLaboral{
 		this.titulo = titulo;
 	}
 
-	public List<Postulante> getPostulantes() {
+	public ArrayList<Postulante> getPostulantes() {
 		return this.postulantes;
 	}
 
@@ -41,11 +41,11 @@ public class OfertaLaboral{
 		this.postulantes.remove(postulante);
 	}
 
-	public List<Tarea> getDescripcionDelPuesto() {
+	public ArrayList<Tarea> getDescripcionDelPuesto() {
 		return this.descripcionDelPuesto;
 	}
 
-	public void setDescripcionDelPuesto(List<Tarea> descripcionDelPuesto) {
+	public void setDescripcionDelPuesto(ArrayList<Tarea> descripcionDelPuesto) {
 		this.descripcionDelPuesto = descripcionDelPuesto;
 	}
 
@@ -81,11 +81,11 @@ public class OfertaLaboral{
 		this.categoria = categoria;
 	}
 
-	public List<Requisito> getRequisitos() {
+	public ArrayList<Requisito> getRequisitos() {
 		return this.requisitos;
 	}
 
-	public void setRequisitos(List<Requisito> requisitos) {
+	public void setRequisitos(ArrayList<Requisito> requisitos) {
 		this.requisitos = requisitos;
 	}
 
