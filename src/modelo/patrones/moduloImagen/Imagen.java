@@ -1,4 +1,4 @@
-package modelo.patrones.dominio;
+package modelo.patrones;
 public class Imagen{
 
 	private String encabezado;
