@@ -18,7 +18,7 @@ public class Administrador{
 		public void setNombre(String nombre){
 			this.nombre = nombre;
 		}
-		public String getNombre(){
+		public String getNombre(){//TODO: HAY DOS GET NOMBRE
 			return this.nombre;
 		}
 
@@ -32,7 +32,7 @@ public class Administrador{
 		public void setCorreo(String correo){
 			this.correo = correo;
 		}
-		public String getNombre(){
+		public String getNombre(){//TODO: HAY DOS GET NOMBRE Y ESTE DEVUELVE EL CORREO
 			return this.correo;
 		}
 

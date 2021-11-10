@@ -6,8 +6,8 @@ public class FormularioCarga{
 
 	// Constructores:
 		public FormularioCarga(Byte cv,float remuneracion){
-			this.cv = cv
-			this.remuneracion = remuneracion
+			this.cv = cv;
+			this.remuneracion = remuneracion;
 		}
 
 	// Setters y Getters:
