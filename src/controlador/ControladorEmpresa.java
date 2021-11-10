@@ -26,6 +26,7 @@ public class ControladorEmpresa{
 											vo.usuario
 										  );
 			this.empresas.add(empresa);
+			System.out.println("Empresa " + vo.razonSocial + " creada");
 		}
 		protected Empresa buscarEmpresa(String cuit){
 			Empresa resultado;
@@ -35,7 +36,7 @@ public class ControladorEmpresa{
 					break;
 				}
 			}
-			return resultado
+			return resultado;
 		}
 		public void eliminarEmpresa(String cuit){
 			Empresa elemento = this.buscarEmpresa(cuit);
