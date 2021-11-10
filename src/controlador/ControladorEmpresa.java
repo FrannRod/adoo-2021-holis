@@ -1,5 +1,7 @@
 package controlador;
 import modelo.dominio.Empresa;
+import modelo.dominio.Direccion;
+import modelo.dominio.Pais;
 import modelo.vo.EmpresaVO;
 import java.util.ArrayList;
 public class ControladorEmpresa{
@@ -16,9 +18,11 @@ public class ControladorEmpresa{
 		}
 	// Collections:
 		public void agregarEmpresa(EmpresaVO vo){
+			Pais pais = ControladorConfiguracion.getInstancia().buscarPais(vo.getDireccion().getPais());
+			Direccion direccion = new Direccion(vo.getDireccion().getCodigoPostal(), pais, vo.getDireccion().getLocalidad(), vo.getDireccion().getCalle(), vo.getDireccion().getNumero(), vo.getDireccion().getPiso());
 			Empresa empresa = new Empresa(	vo.getRazonSocial(),
 											vo.getCuit(),
-											vo.getDireccion(),
+											direccion,
 											vo.getCorreo(),
 											vo.getTelefono(),
 											vo.getTipoDeEmpresa(),

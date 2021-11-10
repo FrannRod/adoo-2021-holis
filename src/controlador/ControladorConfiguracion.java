@@ -15,9 +15,9 @@ public class ControladorConfiguracion{
 			this.paises = new ArrayList<Pais>();
 			this.categorias = new ArrayList<Categoria>();
 		}
-		public static ControladorEmpresa getInstancia(){
+		public static ControladorConfiguracion getInstancia(){
 			if (instancia == null)
-				instancia = new ControladorEmpresa();
+				instancia = new ControladorConfiguracion();
 			return instancia;
 		}
 	// Collections:
@@ -32,7 +32,7 @@ public class ControladorConfiguracion{
 					break;
 				}
 			}
-			return resultado
+			return resultado;
 		}
 
 		public void eliminarIdioma(String idioma){
@@ -52,7 +52,7 @@ public class ControladorConfiguracion{
 					break;
 				}
 			}
-			return resultado
+			return resultado;
 		}
 
 		public void eliminarPais(String paises){
@@ -71,7 +71,7 @@ public class ControladorConfiguracion{
 					break;
 				}
 			}
-			return resultado
+			return resultado;
 		}
 
 		public void eliminarCategoria(String categoria){
