@@ -3,6 +3,7 @@ import java.util.Date;
 import modelo.dominio.OfertaLaboral;
 import modelo.dominio.Postulante;
 import modelo.dominio.Categoria;
+import modelo.dominio.Empresa;
 import modelo.vo.OfertaLaboralVO;
 import modelo.vo.PostulanteVO;
 import java.util.ArrayList;
@@ -21,7 +22,7 @@ public class ControladorOfertaLaboral{
 		}
 	// Collections:
 		public void crearOfertaLaboral(OfertaLaboralVO vo){
-			Empresa empresa = ControladorEmpresa.getInstancia().buscarEmpresa(vo.empresaCuit);//TODO: NO RECONOCE QUE ES EMPRESA FALTA EL IMPORT
+			Empresa empresa = ControladorEmpresa.getInstancia().buscarEmpresa(vo.empresaCuit);//TODO: empresa vo tiene atributos privados hace get FRAN
 			OfertaLaboral oferta = new OfertaLaboral(	
 											vo.titulo,
 											vo.modalidadContratoFullTime,
@@ -43,11 +44,11 @@ public class ControladorOfertaLaboral{
 			OfertaLaboral resultado;
 			for (OfertaLaboral oferta : ofertaLaboral) {
 				if (oferta.getCuit() == vo.getTitulo() && oferta.getEmpresa() == vo.getEmpresa()){//TODO:NO EXISTE EN LA OFERTA LABORAL EL CUIT NI EL METODO GET CUIT
-					resultado = OfertaLaboral;//TODO: ACA MO DEVOLVERIA OFERTA?
+					resultado = oferta;
 					break;
 				}
 			}	
-			return resultado
+			return resultado;
 		}
 		public boolean modificarOfertaLaboral(OfertaLaboralVO vo){
 			OfertaLaboral oferta = this.buscarOfertaLaboral(vo);
