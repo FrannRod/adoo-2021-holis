@@ -17,24 +17,24 @@ public class ControladorPostulante{
 		}
 	// Collections:
 		public void agregarPostulante(PostulanteVO vo){
-			Postulante postulante = new Postulante( vo.nombre,
-											vo.apellido,
-											vo.fechaDeNacimiento,
-											vo.nacionalidad,
-											vo.usuario,
-											vo.contrasena
+			Postulante postulante = new Postulante( vo.getNombre(),
+											vo.getApellido(),
+											vo.getFechaDeNacimiento(),
+											ControladorConfiguracion.getInstancia().buscarPais(vo.getNacionalidad()),
+											vo.getUsuario(),
+											vo.getContrasena()
 										  );
 			this.postulantes.add(postulante);
 		}
 		protected Postulante buscarPostulante(PostulanteVO vo){
 			Postulante resultado;
 			for (Postulante postulante : postulantes) {
-				if (Postulante.getNombre() == vo.getNombre() && Postulante.getApellido() == vo.getApellido()){
+				if (postulante.getNombre() == vo.getNombre() && postulante.getApellido() == vo.getApellido()){
 					resultado = postulante;
 					break;
 				}
 			}
-			return resultado
+			return resultado;
 		}
 		public void eliminarPostulante(PostulanteVO vo){
 			Postulante elemento = this.buscarPostulante(vo);
@@ -48,7 +48,7 @@ public class ControladorPostulante{
 			postulante.setNombre(vo.getNombre());
 			postulante.setApellido(vo.getApellido());
 			postulante.setFechaDeNacimiento(vo.getFechaDeNacimiento());
-			postulante.setNacionalidad(vo.getNacionalidad());
+			postulante.setNacionalidad(ControladorConfiguracion.getInstancia().buscarPais(vo.getNacionalidad()));
 			postulante.setUsuario(vo.getUsuario());
 			postulante.setContrasena(vo.getContrasena());
 			return true;

@@ -1,7 +1,7 @@
 package controlador;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Dictionary;
+import java.util.HashMap;
 import modelo.dominio.Categoria;
 import modelo.dominio.Direccion;
 import modelo.dominio.Empresa;
@@ -40,6 +40,7 @@ public class ControladorOfertaLaboral{
 										  );
 			this.ofertaLaboral.add(oferta);
 			empresa.agregarOferta(oferta);
+			System.out.println("Oferta " + vo.getTitulo() + " creada");
 		}
 		protected OfertaLaboral buscarOfertaLaboral(OfertaLaboralVO vo){
 			OfertaLaboral resultado;
@@ -95,13 +96,13 @@ public class ControladorOfertaLaboral{
 		public OfertaLaboral generarReporteMasPostulantes(Date fecha){
 			OfertaLaboral masPostulantes;
 			for (OfertaLaboral oferta : this.ofertaLaboral) {
-				if (oferta.getFechaVigencia() == fecha && oferta.getPostulantes().size() > masPostulantes.size())
+				if (oferta.getFechaVigencia() == fecha && oferta.getPostulantes().size() > masPostulantes.getPostulantes().size())
 					masPostulantes = oferta;
 			}
 			return masPostulantes;
 		}
-		public Dictionary<Categoria, Integer> generarReporteCategorias(){
-			Dictionary<Categoria, Integer> dic = new Dictionary<Categoria, Integer>();
+		public HashMap<Categoria, Integer> generarReporteCategorias(){
+			HashMap<Categoria, Integer> dic = new HashMap<Categoria, Integer>();
 			Categoria cat;
 			for (OfertaLaboral oferta : this.ofertaLaboral) {
 				cat = oferta.getCategoria();
