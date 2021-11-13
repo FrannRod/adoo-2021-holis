@@ -10,7 +10,7 @@ public class PostulanteVO{
 	private String contrasena;
 
 	// Constructores
-		public PostulanteVO(String nombre,String apellido,Date fechaDeNacimiento,Pais nacionalidadVO,String usuario,String contrasena){
+		public PostulanteVO(String nombre,String apellido,Date fechaDeNacimiento,String nacionalidadVO,String usuario,String contrasena){
 			this.nombre = nombre;
 			this.apellido = apellido;
 			this.fechaDeNacimiento = fechaDeNacimiento;
@@ -44,11 +44,11 @@ public class PostulanteVO{
 			this.fechaDeNacimiento = fecha;
 		}
 
-		public Pais getNacionalidad(){
+		public String getNacionalidad(){
 			return nacionalidadVO;
 		}
 
-		public void setNacionalidad(Pais nacionalidadVO){
+		public void setNacionalidad(String nacionalidadVO){
 			this.nacionalidadVO = nacionalidadVO;
 		}
 

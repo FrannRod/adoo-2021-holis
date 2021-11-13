@@ -5,15 +5,24 @@ public class OfertaLaboralVO{
     private String titulo;
     private Boolean modalidadContratoFullTime; 
     private Boolean tipoTrabajoRemoto;
-    private Direccion lugarTrabajo;
-    private Categoria categoria;
+    private DireccionVO lugarTrabajo;
+    private String categoriaNombre;
     private Float sueldoOfrecido; 
     private Date fechaVigencia;
-    private EstadoOfertaLaboral estado; 
-    private Notificador medioNotificacion; 
-    private Imagen imagen; 
     private Integer periodoDeCierre;
-    private String empresaCuit;
+    private int empresaCuit;
+
+    public OfertaLaboralVO(String titulo, Boolean modalidadContratoFullTime, Boolean tipoTrabajoRemoto, DireccionVO lugarTrabajo, String categoriaNombre, Float sueldoOfrecido, Date fechaVigencia, Integer periodoDeCierre, int empresaCuit){
+    	this.titulo = titulo;
+    	this.modalidadContratoFullTime = modalidadContratoFullTime;
+    	this.tipoTrabajoRemoto = tipoTrabajoRemoto;
+    	this.lugarTrabajo = lugarTrabajo;
+    	this.categoriaNombre = categoriaNombre;
+    	this.sueldoOfrecido = sueldoOfrecido;
+    	this.fechaVigencia = fechaVigencia;
+    	this.periodoDeCierre = periodoDeCierre;
+    	this.empresaCuit = empresaCuit;
+    }
 
 	public String getTitulo() {
 		return this.titulo;
@@ -39,20 +48,20 @@ public class OfertaLaboralVO{
 		this.tipoTrabajoRemoto = tipoTrabajoRemoto;
 	}
 
-	public Direccion getLugarTrabajo() {
+	public DireccionVO getLugarTrabajo() {
 		return this.lugarTrabajo;
 	}
 
-	public void setLugarTrabajo(Direccion lugarTrabajo) {
+	public void setLugarTrabajo(DireccionVO lugarTrabajo) {
 		this.lugarTrabajo = lugarTrabajo;
 	}
 
-	public Categoria getCategoria() {
-		return this.categoria;
+	public String getCategoriaNombre() {
+		return this.categoriaNombre;
 	}
 
-	public void setCategoria(Categoria categoria) {
-		this.categoria = categoria;
+	public void setCategoriaNombre(String categoriaNombre) {
+		this.categoriaNombre = categoriaNombre;
 	}
 
 	public Float getSueldoOfrecido() {
@@ -71,30 +80,6 @@ public class OfertaLaboralVO{
 		this.fechaVigencia = fechaVigencia;
 	}
 
-	public EstadoOfertaLaboral getEstado() {
-		return this.estado;
-	}
-
-	public void setEstado(EstadoOfertaLaboral estado) {
-		this.estado = estado;
-	}
-
-	public Notificador getMedioNotificacion() {
-		return this.medioNotificacion;
-	}
-
-	public void setMedioNotificacion(Notificador medioNotificacion) {
-		this.medioNotificacion = medioNotificacion;
-	}
-
-	public Imagen getImagen() {
-		return this.imagen;
-	}
-
-	public void setImagen(Imagen imagen) {
-		this.imagen = imagen;
-	}
-
 	public Integer getPeriodoDeCierre() {
 		return this.periodoDeCierre;
 	}
@@ -103,11 +88,11 @@ public class OfertaLaboralVO{
 		this.periodoDeCierre = periodoDeCierre;
 	}
 
-	public String getEmpresa() {
+	public int getEmpresaCuit() {
 		return this.empresaCuit;
 	}
 
-	public void setEmpresa(String empresaCuit) {
+	public void setEmpresaCuit(int empresaCuit) {
 		this.empresaCuit = empresaCuit;
 	}
 }

@@ -1,13 +1,15 @@
 package controlador;
+import java.util.ArrayList;
 import java.util.Date;
-import modelo.dominio.OfertaLaboral;
-import modelo.dominio.Postulante;
+import java.util.Dictionary;
 import modelo.dominio.Categoria;
+import modelo.dominio.Direccion;
 import modelo.dominio.Empresa;
+import modelo.dominio.OfertaLaboral;
+import modelo.dominio.Pais;
+import modelo.dominio.Postulante;
 import modelo.vo.OfertaLaboralVO;
 import modelo.vo.PostulanteVO;
-import java.util.ArrayList;
-import java.util.Dictionary;
 public class ControladorOfertaLaboral{
 	private ArrayList<OfertaLaboral> ofertaLaboral;
 	private static ControladorOfertaLaboral instancia;
@@ -23,17 +25,16 @@ public class ControladorOfertaLaboral{
 	// Collections:
 		public void crearOfertaLaboral(OfertaLaboralVO vo){
 			Empresa empresa = ControladorEmpresa.getInstancia().buscarEmpresa(vo.getEmpresaCuit());
+			Pais pais = ControladorConfiguracion.getInstancia().buscarPais(vo.getLugarTrabajo().getPais());
+			Direccion direccion = new Direccion(vo.getLugarTrabajo().getCodigoPostal(), pais, vo.getLugarTrabajo().getLocalidad(), vo.getLugarTrabajo().getCalle(), vo.getLugarTrabajo().getNumero(), vo.getLugarTrabajo().getPiso());
 			OfertaLaboral oferta = new OfertaLaboral(	
 											vo.getTitulo(),
 											vo.getModalidadContratoFullTime(),
 											vo.getTipoTrabajoRemoto(),
-											vo.getLugarTrabajo(),
-											vo.getCategoria(),
+											direccion,
+											ControladorConfiguracion.getInstancia().buscarCategoria(vo.getCategoriaNombre()),
 											vo.getSueldoOfrecido(),
 											vo.getFechaVigencia(),
-											vo.getEstado(),
-											vo.getMedioNotificacion(),
-											vo.getImagen(),
 											vo.getPeriodoDeCierre(),
 											empresa
 										  );
@@ -57,13 +58,9 @@ public class ControladorOfertaLaboral{
 			oferta.setTitulo(vo.getTitulo());
 			oferta.setModalidadContratoFullTime(vo.getModalidadContratoFullTime());
 			oferta.setTipoTrabajoRemoto(vo.getTipoTrabajoRemoto());
-			oferta.setLugarTrabajo(vo.getLugarTrabajo());
-			oferta.setCategoria(vo.getCategoria());
+			oferta.setCategoria(ControladorConfiguracion.getInstancia().buscarCategoria(vo.getCategoriaNombre()));
 			oferta.setSueldoOfrecido(vo.getSueldoOfrecido());
 			oferta.setFechaVigencia(vo.getFechaVigencia());
-			oferta.setEstado(vo.getEstado());
-			oferta.setMedioNotificacion(vo.getMedioNotificacion());
-			oferta.setImagen(vo.getImagen());
 			oferta.setPeriodoDeCierre(vo.getPeriodoDeCierre());
 			return true;
 		}
@@ -71,7 +68,7 @@ public class ControladorOfertaLaboral{
 			OfertaLaboral oferta = this.buscarOfertaLaboral(vo);
 			if (oferta == null)
 				return false;
-			oferta.estado.cerrar();//TODO: DICE QUE NO PUEDE VER EL ESTADO IMAGINO QUE PORQUE ES PRIVATE
+			oferta.getEstado().cerrar(oferta);
 			return true;
 		}
 		public boolean reabrirOfertaLaboral(OfertaLaboralVO vo){
