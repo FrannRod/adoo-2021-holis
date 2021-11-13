@@ -28,8 +28,7 @@ public class Cerrado implements EstadoOfertaLaboral{
         System.out.println("localDateTime : " + dateFormat8.format(localDateTime));
 
         // plus one
-        localDateTime = localDateTime.plusYears(1).plusMonths(1).plusDays(1);
-        localDateTime = localDateTime.plusHours(1).plusMinutes(2).minusMinutes(1).plusSeconds(1);
+        localDateTime = localDateTime.plusDays(dias);
 
         // convert LocalDateTime to date
         Date currentDatePlusOneDay = Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
