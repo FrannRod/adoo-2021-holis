@@ -5,3 +5,4 @@ cd ../comp
 java test.Main
 cd ..
 rm -r comp
+cmd /k
