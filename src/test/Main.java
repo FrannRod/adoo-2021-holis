@@ -26,6 +26,10 @@ public class Main {
 		ControladorPostulante controladorPostulante = ControladorPostulante.getInstancia();
 		controladorPostulante.agregarPostulante(postulante);
 		// Asociar
+		controladorOfertas.postularse(postulante, oferta);
+			// No cumple los requisitos. Los agregamos.
+		controladorPostulante.agregarInteres(postulante, "echería");
+		controladorOfertas.postularse(postulante, oferta);
 		// Verificamos que recorriendo las clases desde la empresa podemos llegar al postulante
 	}
 }

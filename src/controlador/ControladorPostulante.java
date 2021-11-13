@@ -57,12 +57,11 @@ public class ControladorPostulante{
 
 		public boolean agregarInteres(PostulanteVO vo, String categoria){
 			Postulante postulante = this.buscarPostulante(vo);
-			if (postulante == null)
-				return false;
+			assert postulante != null;
 			Categoria cat = ControladorConfiguracion.getInstancia().buscarCategoria(categoria);
-			if (cat == null)
-				return false;
+			assert cat != null;
 			postulante.agregarInteres(cat);
+			System.out.println("Se agregó el interes " + categoria + " al postulante " + postulante.getNombre());
 			return true;
 		}
 }

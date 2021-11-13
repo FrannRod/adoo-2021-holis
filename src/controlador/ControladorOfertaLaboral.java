@@ -81,15 +81,22 @@ public class ControladorOfertaLaboral{
 		}
 		public boolean postularse(PostulanteVO postulanteVo, OfertaLaboralVO ofertaVo){
 			OfertaLaboral oferta = this.buscarOfertaLaboral(ofertaVo);
-			if (oferta == null)
+			if (oferta == null){
+				System.out.println("No se encuentra la oferta");
 				return false;
+			}
 			Postulante postulante = ControladorPostulante.getInstancia().buscarPostulante(postulanteVo);
-			if (postulante == null)
+			if (postulante == null){
+				System.out.println("No se encuentra el postulante");
 				return false;
-			if (! oferta.controlarRequisitos(postulante))
+			}
+			if (! oferta.controlarRequisitos(postulante)){
+				System.out.println("El postulante no cumple los requisitos");
 				return false;
+			}
 			postulante.agregarPostulacion(oferta);
 			oferta.agregarPostulante(postulante);
+			System.out.println("El postulante "+ postulanteVo.getNombre() + " se postuló a la oferta " + oferta.getTitulo());
 			return true;
 		}
 	// Reportes:
