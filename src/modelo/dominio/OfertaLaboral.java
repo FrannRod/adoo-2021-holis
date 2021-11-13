@@ -31,6 +31,7 @@ public class OfertaLaboral{
 		this.fechaVigencia = fechaVigencia;
 		this.periodoDeCierre = periodoDeCierre;
 		this.empresa = empresa;
+		this.estado = new Abierto(); 
 	}
 	
 
