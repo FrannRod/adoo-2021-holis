@@ -67,9 +67,12 @@ public class ControladorOfertaLaboral{
 		}
 		public boolean cerrarOfertaLaboral(OfertaLaboralVO vo){
 			OfertaLaboral oferta = this.buscarOfertaLaboral(vo);
-			if (oferta == null)
+			if (oferta == null){
+				System.out.println("No se encontró la oferta");
 				return false;
+			}
 			oferta.getEstado().cerrar(oferta);
+			System.out.println("Oferta cerrada exitosamente");
 			return true;
 		}
 		public boolean reabrirOfertaLaboral(OfertaLaboralVO vo){
