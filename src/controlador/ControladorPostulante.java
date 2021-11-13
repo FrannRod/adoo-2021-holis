@@ -27,7 +27,7 @@ public class ControladorPostulante{
 			this.postulantes.add(postulante);
 		}
 		protected Postulante buscarPostulante(PostulanteVO vo){
-			Postulante resultado;
+			Postulante resultado = null;
 			for (Postulante postulante : postulantes) {
 				if (postulante.getNombre() == vo.getNombre() && postulante.getApellido() == vo.getApellido()){
 					resultado = postulante;

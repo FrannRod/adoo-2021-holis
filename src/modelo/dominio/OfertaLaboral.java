@@ -2,6 +2,7 @@ package modelo.dominio;
 import modelo.patrones.moduloEstadoOfertaLab.EstadoOfertaLaboral;
 import modelo.patrones.moduloNotificaciones.Notificador;
 import modelo.patrones.moduloImagen.Imagen;
+import modelo.patrones.moduloEstadoOfertaLab.Abierto;
 import java.util.ArrayList;
 import java.util.Date;
 public class OfertaLaboral{
@@ -21,11 +22,11 @@ public class OfertaLaboral{
     private Integer periodoDeCierre;
     private Empresa empresa; 
 
-	public OfertaLaboral(String titulo, Boolean	modalidadContratoFullTime, Boolean tipoTrabajoRemoto, Direccion direccion, Categoria categoria, Float sueldoOfrecido, Date fechaVigencia, Date periodoDeCierre,	Empresa empresa){
+	public OfertaLaboral(String titulo, Boolean	modalidadContratoFullTime, Boolean tipoTrabajoRemoto, Direccion direccion, Categoria categoria, Float sueldoOfrecido, Date fechaVigencia, Integer periodoDeCierre,	Empresa empresa){
 		this.titulo = titulo;
 		this.modalidadContratoFullTime = modalidadContratoFullTime;
 		this.tipoTrabajoRemoto = tipoTrabajoRemoto;
-		this.direccion = direccion;
+		this.lugarTrabajo = direccion;
 		this.categoria = categoria;
 		this.sueldoOfrecido = sueldoOfrecido;
 		this.fechaVigencia = fechaVigencia;

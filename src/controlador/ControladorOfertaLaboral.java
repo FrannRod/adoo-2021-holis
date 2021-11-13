@@ -43,7 +43,7 @@ public class ControladorOfertaLaboral{
 			System.out.println("Oferta " + vo.getTitulo() + " creada");
 		}
 		protected OfertaLaboral buscarOfertaLaboral(OfertaLaboralVO vo){
-			OfertaLaboral resultado;
+			OfertaLaboral resultado = null;
 			for (OfertaLaboral oferta : ofertaLaboral) {
 				if (oferta.getTitulo() == vo.getTitulo() && oferta.getEmpresa() == ControladorEmpresa.getInstancia().buscarEmpresa(vo.getEmpresaCuit())){
 					resultado = oferta;
@@ -94,9 +94,9 @@ public class ControladorOfertaLaboral{
 		}
 	// Reportes:
 		public OfertaLaboral generarReporteMasPostulantes(Date fecha){
-			OfertaLaboral masPostulantes;
+			OfertaLaboral masPostulantes = null;
 			for (OfertaLaboral oferta : this.ofertaLaboral) {
-				if (oferta.getFechaVigencia() == fecha && oferta.getPostulantes().size() > masPostulantes.getPostulantes().size())
+				if (masPostulantes == null || (oferta.getFechaVigencia() == fecha && oferta.getPostulantes().size() > masPostulantes.getPostulantes().size()))
 					masPostulantes = oferta;
 			}
 			return masPostulantes;
