@@ -5,16 +5,16 @@ public class PostulanteVO{
 	private String nombre;
 	private String apellido;
 	private Date fechaDeNacimiento;
-	private Pais nacionalidad;
+	private String nacionalidadVO;
 	private String usuario;
 	private String contrasena;
 
 	// Constructores
-		public PostulanteVO(String nombre,String apellido,Date fechaDeNacimiento,Pais nacionalidad,String usuario,String contrasena){
+		public PostulanteVO(String nombre,String apellido,Date fechaDeNacimiento,Pais nacionalidadVO,String usuario,String contrasena){
 			this.nombre = nombre;
 			this.apellido = apellido;
 			this.fechaDeNacimiento = fechaDeNacimiento;
-			this.nacionalidad = nacionalidad;
+			this.nacionalidadVO = nacionalidadVO;
 			this.usuario = usuario;
 			this.contrasena = contrasena;
 		}
@@ -45,11 +45,11 @@ public class PostulanteVO{
 		}
 
 		public Pais getNacionalidad(){
-			return nacionalidad;
+			return nacionalidadVO;
 		}
 
-		public void setNacionalidad(Pais nacionalidad){
-			this.nacionalidad = nacionalidad;
+		public void setNacionalidad(Pais nacionalidadVO){
+			this.nacionalidadVO = nacionalidadVO;
 		}
 
 		public String getContrasena(){
@@ -65,4 +65,3 @@ public class PostulanteVO{
 			this.usuario = usuario;
 		}
 }
-//TODO: COMO EN OFERTA LABORAL VO ESTA CLASE VO TAMPOCO ENTIENDE QUE ES PAIS, HAY QUE IMPORTARLO?

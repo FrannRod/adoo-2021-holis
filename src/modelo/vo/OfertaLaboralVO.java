@@ -13,7 +13,7 @@ public class OfertaLaboralVO{
     private Notificador medioNotificacion; 
     private Imagen imagen; 
     private Integer periodoDeCierre;
-    private String empresaCuit; //TODO: PORQUE ESTO NO ESTA EN OFERTA LABORAL NORMAL Y EN VO SI O ESTA EN UNO O EN NIGUNO, ADEMAS LA EMORESA NO TIENE CUITT LAS PERSONAS TIENEN CUIT
+    private String empresaCuit;
 
 	public String getTitulo() {
 		return this.titulo;
@@ -111,4 +111,3 @@ public class OfertaLaboralVO{
 		this.empresaCuit = empresaCuit;
 	}
 }
-//TODO: ESTE CONTROLADOR Y LA CLASE VO DE OFERTA LABORAL NO ENTIENDEN QUE ES CATEGORIA, IMAGEN, ESTADO, NOTIFICADOR, DIRECCION. HAY QUE IMPORTARLO? 

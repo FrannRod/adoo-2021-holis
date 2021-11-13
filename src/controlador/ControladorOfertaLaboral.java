@@ -22,19 +22,19 @@ public class ControladorOfertaLaboral{
 		}
 	// Collections:
 		public void crearOfertaLaboral(OfertaLaboralVO vo){
-			Empresa empresa = ControladorEmpresa.getInstancia().buscarEmpresa(vo.empresaCuit);//TODO: empresa vo tiene atributos privados hace get FRAN
+			Empresa empresa = ControladorEmpresa.getInstancia().buscarEmpresa(vo.getEmpresaCuit());
 			OfertaLaboral oferta = new OfertaLaboral(	
-											vo.titulo,
-											vo.modalidadContratoFullTime,
-											vo.tipoTrabajoRemoto,
-											vo.lugarTrabajo,
-											vo.categoria,
-											vo.sueldoOfrecido,
-											vo.fechaVigencia,
-											vo.estado,
-											vo.medioNotificacion,
-											vo.imagen,
-											vo.periodoDeCierre,
+											vo.getTitulo(),
+											vo.getModalidadContratoFullTime(),
+											vo.getTipoTrabajoRemoto(),
+											vo.getLugarTrabajo(),
+											vo.getCategoria(),
+											vo.getSueldoOfrecido(),
+											vo.getFechaVigencia(),
+											vo.getEstado(),
+											vo.getMedioNotificacion(),
+											vo.getImagen(),
+											vo.getPeriodoDeCierre(),
 											empresa
 										  );
 			this.ofertaLaboral.add(oferta);
@@ -43,7 +43,7 @@ public class ControladorOfertaLaboral{
 		protected OfertaLaboral buscarOfertaLaboral(OfertaLaboralVO vo){
 			OfertaLaboral resultado;
 			for (OfertaLaboral oferta : ofertaLaboral) {
-				if (oferta.getCuit() == vo.getTitulo() && oferta.getEmpresa() == vo.getEmpresa()){//TODO:NO EXISTE EN LA OFERTA LABORAL EL CUIT NI EL METODO GET CUIT
+				if (oferta.getTitulo() == vo.getTitulo() && oferta.getEmpresa() == ControladorEmpresa.getInstancia().buscarEmpresa(vo.getEmpresaCuit())){
 					resultado = oferta;
 					break;
 				}
@@ -101,7 +101,7 @@ public class ControladorOfertaLaboral{
 				if (oferta.getFechaVigencia() == fecha && oferta.getPostulantes().size() > masPostulantes.size())
 					masPostulantes = oferta;
 			}
-			return oferta;//TODO: ACA NO DEVUELVE MAS POSTULANTES?
+			return masPostulantes;
 		}
 		public Dictionary<Categoria, Integer> generarReporteCategorias(){
 			Dictionary<Categoria, Integer> dic = new Dictionary<Categoria, Integer>();
@@ -132,7 +132,7 @@ public class ControladorOfertaLaboral{
 			}
 			return masAccesible; 
 		}
-		public generarReporteMasExigente(){//TODO: FALTA QUE TIPO VA A DEVOLVER LA FUNCION
+		public OfertaLaboral generarReporteMasExigente(){
 			//tiene mayor cantidad de requisitos.
 			int maxRequisitos = 0;
 			OfertaLaboral masExigente = null;
@@ -145,4 +145,3 @@ public class ControladorOfertaLaboral{
 			return masExigente;
 		}
 }
-//TODO: ESTE CONTROLADOR Y LA CLASE VO DE OFERTA LABORAL NO ENTIENDEN QUE ES CATEGORIA, IMAGEN, ESTADO, ETC. HAY QUE IMPORTARLO? 

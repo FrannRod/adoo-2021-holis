@@ -45,9 +45,9 @@ public class Imagen{
 		public Formato getFormato(){
 			return this.formato;
 		}
-		public void generarImagen(OfertaLaboral oferta){//TODO:REVISAR SI ALGO DE LO QUE HICE ES ILEGAL
+		public void generarImagen(OfertaLaboral oferta){
 			this.encabezado=oferta.getTitulo();
-			this.cuerpo="la empresa:"+oferta.getEmpresa().getRazonSocial()+"sueldo:"+Float.toString(oferta.getSueldoOfrecido());
+			this.cuerpo="Empresa: " +oferta.getEmpresa().getRazonSocial()+" Sueldo: "+Float.toString(oferta.getSueldoOfrecido());
 			this.pie="-";
 			System.out.println("Se ha generado la imagen con encabezado:"+ this.encabezado+"cuerpo:"+this.cuerpo+ "pie:"+this.pie);
 		}
