@@ -78,7 +78,7 @@ public class ControladorOfertaLaboral{
 			OfertaLaboral oferta = this.buscarOfertaLaboral(vo);
 			if (oferta == null)
 				return false;
-			oferta.estado.abrir();//TODO: DICE QUE NO PUEDE VER EL ESTADO IMAGINO QUE PORQUE ES PRIVATE
+			oferta.getEstado().abrir(oferta, 8);
 			return true;
 		}
 		public boolean postularse(PostulanteVO postulanteVo, OfertaLaboralVO ofertaVo){
