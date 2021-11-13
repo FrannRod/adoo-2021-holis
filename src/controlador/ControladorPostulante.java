@@ -25,6 +25,7 @@ public class ControladorPostulante{
 											vo.getContrasena()
 										  );
 			this.postulantes.add(postulante);
+			System.out.println("Postulante " + vo.getNombre() + vo.getApellido() + " creado");
 		}
 		protected Postulante buscarPostulante(PostulanteVO vo){
 			Postulante resultado = null;
