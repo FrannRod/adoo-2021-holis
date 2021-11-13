@@ -21,6 +21,19 @@ public class OfertaLaboral{
     private Integer periodoDeCierre;
     private Empresa empresa; 
 
+	public OfertaLaboral(String titulo, Boolean	modalidadContratoFullTime, Boolean tipoTrabajoRemoto, Direccion direccion, Categoria categoria, Float sueldoOfrecido, Date fechaVigencia, Date periodoDeCierre,	Empresa empresa){
+		this.titulo = titulo;
+		this.modalidadContratoFullTime = modalidadContratoFullTime;
+		this.tipoTrabajoRemoto = tipoTrabajoRemoto;
+		this.direccion = direccion;
+		this.categoria = categoria;
+		this.sueldoOfrecido = sueldoOfrecido;
+		this.fechaVigencia = fechaVigencia;
+		this.periodoDeCierre = periodoDeCierre;
+		this.empresa = empresa;
+	}
+	
+
 	public String getTitulo() {
 		return this.titulo;
 	}
