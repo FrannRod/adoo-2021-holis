@@ -33,6 +33,10 @@ public class OfertaLaboral{
 		this.periodoDeCierre = periodoDeCierre;
 		this.empresa = empresa;
 		this.estado = new Abierto(); 
+
+		this.postulantes = new ArrayList<Postulante>();
+		this.descripcionDelPuesto = new ArrayList<Tarea>();
+		this.requisitos = new ArrayList<Requisito>();
 	}
 	
 

@@ -28,7 +28,7 @@ public class Main {
 		// Asociar
 		controladorOfertas.postularse(postulante, oferta);
 			// No cumple los requisitos. Los agregamos.
-		controladorPostulante.agregarInteres(postulante, "echería");
+		controladorPostulante.agregarInteres(postulante, "lechería");
 		controladorOfertas.postularse(postulante, oferta);
 		// Verificamos que recorriendo las clases desde la empresa podemos llegar al postulante
 	}
