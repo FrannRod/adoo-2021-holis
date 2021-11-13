@@ -30,6 +30,5 @@ public class Main {
 			// No cumple los requisitos. Los agregamos.
 		controladorPostulante.agregarInteres(postulante, "lechería");
 		controladorOfertas.postularse(postulante, oferta);
-		// Verificamos que recorriendo las clases desde la empresa podemos llegar al postulante
 	}
 }
