@@ -1,5 +1,5 @@
 package modelo.patrones.moduloImagen;
 
 public interface IEstrategiaDeExportacion{
-    public String exportar(IExportable);
+    public String exportar(IExportable exp);
 }

@@ -4,7 +4,10 @@ public class Exportador {
     IExportable imagenAExportar; 
     IEstrategiaDeExportacion estrategia; 
 
-    public String exportar(){}
+    public String exportar(){
+        return "";
+    }
 
-    public void cambiarEstrategia(IEstrategiaDeExportacion){}
+    public void cambiarEstrategia(IEstrategiaDeExportacion exp){
+    }
 }
