@@ -14,11 +14,11 @@ public class Main {
 		ControladorConfiguracion.getInstancia().agregarPais("Argentina");
 		DireccionVO direccion = new DireccionVO("1105","Argentina","CABA","Florida",2,1);
 		// Empresa
-		EmpresaVO nuevaEmpresa = new EmpresaVO("La lechita feliz S.A.", 216665514, direccion, "leche@feliz.com", "4749-212", "Sociedad Anónima", "1234", "lechefeliz");
+		EmpresaVO nuevaEmpresa = new EmpresaVO("La vaca feliz S.A.", 216665514, direccion, "vaca@feliz.com", "4749-212", "Sociedad Anónima", "1234", "vacafeliz");
 		ControladorEmpresa controladorEmpresa = ControladorEmpresa.getInstancia();
 		controladorEmpresa.agregarEmpresa(nuevaEmpresa);
 		// Oferta
-		OfertaLaboralVO oferta = new OfertaLaboralVO("Lechero profesional", true, false, direccion, "lechería", new Float(666.66), new Date(), 3, nuevaEmpresa.getCuit());
+		OfertaLaboralVO oferta = new OfertaLaboralVO("Operario", true, false, direccion, "lechería", new Float(666.66), new Date(), 3, nuevaEmpresa.getCuit());
 		ControladorOfertaLaboral controladorOfertas = ControladorOfertaLaboral.getInstancia();
 		controladorOfertas.crearOfertaLaboral(oferta);
 		// Postulante
