@@ -1,6 +1,6 @@
 package modelo.patrones.moduloNotificaciones.estrategias.adapters.email;
 
-import moduloNotificaciones.Notificacion;
+import modelo.patrones.moduloNotificaciones.Notificacion;
 
 public class AdapterEmailJavaEmail implements AdapterNotificadorEmail {
 
@@ -10,7 +10,7 @@ public class AdapterEmailJavaEmail implements AdapterNotificadorEmail {
 	 */
 	public void enviarEmail(Notificacion notificacion) {
 		System.out.println("Enviando Email a " +
-				notificacion.getNroCompletoDestinatario() + " por Twilio: " +
+				notificacion.getEmailDestinatario() +
 				"'" + notificacion.getMensaje() + "'"
 				);
 

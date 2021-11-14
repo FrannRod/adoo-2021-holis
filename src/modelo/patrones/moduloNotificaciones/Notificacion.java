@@ -2,6 +2,15 @@ package modelo.patrones.moduloNotificaciones;
 
 public class Notificacion {
 	private String emailDestinatario;
+	private String emailRemitente;
+	private String mensaje;
+
+	public Notificacion(String emailDestinatario, String mensaje){
+		this.emailDestinatario = emailDestinatario;
+		this.emailRemitente = "nosotros@mail.com";
+		this.mensaje = mensaje; 
+	}
+
 	public String getEmailDestinatario() {
 		return emailDestinatario;
 	}
@@ -20,22 +29,8 @@ public class Notificacion {
 	public void setMensaje(String mensaje) {
 		this.mensaje = mensaje;
 	}
-	public String getNroCompletoDestinatario() {
-		return nroCompletoDestinatario;
-	}
-	public void setNroCompletoDestinatario(String nroCompletoDestinatario) {
-		this.nroCompletoDestinatario = nroCompletoDestinatario;
-	}
-	public String getNroCompletoRemitente() {
-		return nroCompletoRemitente;
-	}
-	public void setNroCompletoRemitente(String nroCompletoRemitente) {
-		this.nroCompletoRemitente = nroCompletoRemitente;
-	}
-	private String emailRemitente;
-	private String mensaje;
-	private String nroCompletoDestinatario;
-	private String nroCompletoRemitente;
+	
+	
 	
 }
 

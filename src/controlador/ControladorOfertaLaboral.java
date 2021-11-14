@@ -10,6 +10,7 @@ import modelo.dominio.Pais;
 import modelo.dominio.Postulante;
 import modelo.vo.OfertaLaboralVO;
 import modelo.vo.PostulanteVO;
+import modelo.patrones.moduloNotificaciones.Notificacion;
 public class ControladorOfertaLaboral{
 	private ArrayList<OfertaLaboral> ofertaLaboral;
 	private static ControladorOfertaLaboral instancia;
@@ -99,7 +100,11 @@ public class ControladorOfertaLaboral{
 			}
 			postulante.agregarPostulacion(oferta);
 			oferta.agregarPostulante(postulante);
-			System.out.println("El postulante "+ postulanteVo.getNombre() + " se postuló a la oferta " + oferta.getTitulo());
+			//Envío de notificación
+			String mensaje = "El postulante "+ postulanteVo.getNombre() + " se postuló a la oferta " + oferta.getTitulo();
+			Notificacion notif = new Notificacion (oferta.getEmpresa().getCorreo(), mensaje);
+			oferta.getMedioNotificacion().enviar(notif);
+			System.out.println(mensaje);
 			return true;
 		}
 	// Reportes:

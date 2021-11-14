@@ -1,6 +1,6 @@
 package modelo.patrones.moduloNotificaciones.estrategias.adapters.email;
 
-import moduloNotificaciones.Notificacion;
+import modelo.patrones.moduloNotificaciones.Notificacion;
 
 public interface AdapterNotificadorEmail {
 	void enviarEmail(Notificacion notificacion);
