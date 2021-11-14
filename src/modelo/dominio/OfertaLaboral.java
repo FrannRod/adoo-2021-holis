@@ -1,10 +1,11 @@
 package modelo.dominio;
-import modelo.patrones.moduloEstadoOfertaLab.EstadoOfertaLaboral;
-import modelo.patrones.moduloNotificaciones.Notificador;
-import modelo.patrones.moduloImagen.Imagen;
-import modelo.patrones.moduloEstadoOfertaLab.Abierto;
 import java.util.ArrayList;
 import java.util.Date;
+import modelo.patrones.moduloEstadoOfertaLab.Abierto;
+import modelo.patrones.moduloEstadoOfertaLab.EstadoOfertaLaboral;
+import modelo.patrones.moduloImagen.Formato;
+import modelo.patrones.moduloImagen.Imagen;
+import modelo.patrones.moduloNotificaciones.Notificador;
 public class OfertaLaboral{
     private String titulo;
     private ArrayList<Postulante> postulantes;
@@ -169,8 +170,8 @@ public class OfertaLaboral{
 		this.titulo = categoria+" en "+lugarTrabajo;
     }
 
-	public boolean generarImagen(){
-		return true;
+	public void crearImagen(Formato formato){
+		this.imagen = new Imagen().generarImagen(this, formato);
 	}
 
 	public boolean controlarRequisitos(Postulante postulante){

@@ -9,14 +9,6 @@ public class Imagen{
 	private String pie;
 	private Formato formato;
 
-	// Constructores:
-	public Imagen(String encabezado, String cuerpo, String pie, Formato formato){
-		this.encabezado = encabezado;
-		this.cuerpo = cuerpo;
-		this.pie = pie;
-		this.formato = formato;
-	}
-
 	// Setters y Getters:
 		public void setEncabezado(String encabezado){
 			this.encabezado = encabezado;
@@ -45,7 +37,8 @@ public class Imagen{
 		public Formato getFormato(){
 			return this.formato;
 		}
-		public void generarImagen(OfertaLaboral oferta){
+		public void generarImagen(OfertaLaboral oferta, Formato formato){
+			this.formato = formato;
 			this.encabezado=oferta.getTitulo();
 			this.cuerpo="Empresa: " +oferta.getEmpresa().getRazonSocial()+" Sueldo: "+Float.toString(oferta.getSueldoOfrecido());
 			this.pie="-";
