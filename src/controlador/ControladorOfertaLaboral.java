@@ -8,9 +8,10 @@ import modelo.dominio.Empresa;
 import modelo.dominio.OfertaLaboral;
 import modelo.dominio.Pais;
 import modelo.dominio.Postulante;
+import modelo.patrones.moduloImagen.Formato;
+import modelo.patrones.moduloNotificaciones.Notificacion;
 import modelo.vo.OfertaLaboralVO;
 import modelo.vo.PostulanteVO;
-import modelo.patrones.moduloNotificaciones.Notificacion;
 public class ControladorOfertaLaboral{
 	private ArrayList<OfertaLaboral> ofertaLaboral;
 	private static ControladorOfertaLaboral instancia;
@@ -156,5 +157,11 @@ public class ControladorOfertaLaboral{
 				}
 			}
 			return masExigente;
+		}
+		public String generarImagen(OfertaLaboralVO vo, String nombreArchivo, Formato formato){
+			OfertaLaboral oferta = this.buscarOfertaLaboral(vo);
+			if (oferta == null)
+				return "";
+			return oferta.exportar(nombreArchivo, formato);
 		}
 }

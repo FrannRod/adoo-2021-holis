@@ -3,10 +3,12 @@ import java.util.ArrayList;
 import java.util.Date;
 import modelo.patrones.moduloEstadoOfertaLab.Abierto;
 import modelo.patrones.moduloEstadoOfertaLab.EstadoOfertaLaboral;
+import modelo.patrones.moduloImagen.FacadeExportador;
 import modelo.patrones.moduloImagen.Formato;
+import modelo.patrones.moduloImagen.IExportable;
 import modelo.patrones.moduloImagen.Imagen;
 import modelo.patrones.moduloNotificaciones.Notificador;
-public class OfertaLaboral{
+public class OfertaLaboral implements IExportable{
     private String titulo;
     private ArrayList<Postulante> postulantes;
     private ArrayList<Tarea> descripcionDelPuesto;
@@ -142,14 +144,6 @@ public class OfertaLaboral{
 		this.medioNotificacion = medioNotificacion;
 	}
 
-	public Imagen getImagen() {
-		return this.imagen;
-	}
-
-	public void setImagen(Imagen imagen) {
-		this.imagen = imagen;
-	}
-
 	public Integer getPeriodoDeCierre() {
 		return this.periodoDeCierre;
 	}
@@ -170,8 +164,18 @@ public class OfertaLaboral{
 		this.titulo = categoria+" en "+lugarTrabajo;
     }
 
-	public void crearImagen(Formato formato){
-		this.imagen = new Imagen().generarImagen(this, formato);
+	public Imagen crearImagen(Formato formato){
+		if (this.imagen == null){
+			this.imagen = new Imagen();
+			this.imagen.setFormato(formato);
+			this.imagen.setEncabezado(this.titulo);
+			this.imagen.setCuerpo("Empresa: " + this.empresa.getRazonSocial() + " Sueldo: " + Float.toString(this.sueldoOfrecido));
+			this.imagen.setPie("-");
+		}
+		return this.imagen;
+	}
+	public String exportar(String nombreArchivo, Formato formato){
+		return new FacadeExportador().exportar(this, nombreArchivo);
 	}
 
 	public boolean controlarRequisitos(Postulante postulante){

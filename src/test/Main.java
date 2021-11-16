@@ -4,10 +4,11 @@ import controlador.ControladorEmpresa;
 import controlador.ControladorOfertaLaboral;
 import controlador.ControladorPostulante;
 import java.util.Date;
+import modelo.patrones.moduloImagen.Formato;
 import modelo.vo.DireccionVO;
 import modelo.vo.EmpresaVO;
-import modelo.vo.PostulanteVO;
 import modelo.vo.OfertaLaboralVO;
+import modelo.vo.PostulanteVO;
 public class Main {
 	public static void main(String[] args) {
 		ControladorConfiguracion.getInstancia().agregarCategoria("lechería");
@@ -32,6 +33,7 @@ public class Main {
 		controladorOfertas.postularse(postulante, oferta);
 		// Cerramos la oferta
 		controladorOfertas.cerrarOfertaLaboral(oferta);
-		// Notificación
+		// Imagen
+		controladorOfertas.generarImagen(oferta, "archivoNombre", Formato.PNG);
 	}
 }

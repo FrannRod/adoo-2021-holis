@@ -1,7 +1,5 @@
 package modelo.patrones.moduloImagen;
 
-import modelo.dominio.OfertaLaboral;
-
 public class Imagen{
 
 	private String encabezado;
@@ -36,13 +34,5 @@ public class Imagen{
 		}
 		public Formato getFormato(){
 			return this.formato;
-		}
-		public Imagen generarImagen(OfertaLaboral oferta, Formato formato){
-			this.formato = formato;
-			this.encabezado=oferta.getTitulo();
-			this.cuerpo="Empresa: " +oferta.getEmpresa().getRazonSocial()+" Sueldo: "+Float.toString(oferta.getSueldoOfrecido());
-			this.pie="-";
-			System.out.println("Se ha generado la imagen con encabezado:"+ this.encabezado+"cuerpo:"+this.cuerpo+ "pie:"+this.pie);
-			return this;
 		}
 }
